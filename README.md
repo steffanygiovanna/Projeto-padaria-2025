@@ -2,3 +2,6 @@
 
 #**Integrantes**
 # rebeca
+# Steffany
+# João Angra
+# Thamye
