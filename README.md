@@ -1,7 +1,7 @@
 # Projeto-padaria-2025
 
 #**Integrantes**
-- rebeca
+- Rebeca
 - Steffany
 - João Angra
 - Thamye
