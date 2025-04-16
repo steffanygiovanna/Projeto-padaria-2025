@@ -1,0 +1,67 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Cliente{
+  cliente_id Int @id @default(autoincrement())
+  nome String @db.VarChar(100)
+  telefone String @db.VarChar(255)
+  endereco String? @db.VarChar(100)
+  pedidos Pedido[]
+}
+
+model Produto{
+  produto_id Int @id @default(autoincrement())
+  nome String @db.VarChar(100)
+  preco Decimal @db.Decimal(10,2)
+  descricao String @db.VarChar(255)
+  qtd_estoque Int
+  itens Item[]
+}
+
+model Pedido{
+  pedido_id Int @id @default(autoincrement())
+  cliente_id Int
+  data DateTime @default(now())
+  sub_total Decimal @db.Decimal(10,2)
+  cliente Cliente @relation(fields: [cliente_id], references: [cliente_id])
+  itens Item[]
+}
+
+model Item_Pedido{
+  item_id Int @id @default(autoincrement())
+  pedido_id Int
+  produto_id Int
+  quantidade Int
+  preco_unitario Decimal @db.Decimal(10,2) @default(0)
+  pedido Pedido @relation(fields: [pedido_id], references: [pedido_id], onDelete: Cascade)
+  pizza Pizza @relation(fields: [pizza_id], references: [pizza_id])
+}
+
+model Funcionario{
+  funcionario_id Int @id @default(autoincrement())
+  nome String @db.VarChar(100)
+  cargo String @db.VarChar(100)
+  telefone String @db.VarChar(255)
+}
+
+model Funcionario{
+  funcionario_id Int @id @default(autoincrement())
+  nome String @db.VarChar(100)
+  cargo String @db.VarChar(100)
+  telefone String @db.VarChar(255)
+}
+
+model Item_Vendido{
+  venda_id Int @id @default(autoincrement())
+  pedido_id Int
+  produto_id Int
+  data_venda DateTime @default(now())
+  forma_pagamento String @db.VarChar(100)
+  valor_total Decimal @db.Decimal(10,2) @default(0)
+}
