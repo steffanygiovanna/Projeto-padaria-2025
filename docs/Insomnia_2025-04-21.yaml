@@ -1,0 +1,733 @@
+type: collection.insomnia.rest/5.0
+name: Scratch Pad
+meta:
+  id: wrk_scratchpad
+  created: 1744234071317
+  modified: 1744234071317
+collection:
+  - name: Clientes
+    meta:
+      id: fld_b24c534db81a4d768d58f46cc34742a1
+      created: 1745264909516
+      modified: 1745265087841
+      sortKey: -1745264909516
+    children:
+      - url: http://localhost:5000/clientes
+        name: read
+        meta:
+          id: req_9d2c52131518447f91da3693f6b9c74a
+          created: 1745264933045
+          modified: 1745265202377
+          isPrivate: false
+          sortKey: -1745264933045
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:5000/clientes/6
+        name: readOne
+        meta:
+          id: req_cbdba5ab70dc40c9bb96e58211fbe248
+          created: 1745265021594
+          modified: 1745266672583
+          isPrivate: false
+          sortKey: -1745264932995
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:5000/clientes
+        name: create
+        meta:
+          id: req_f4a3eb2f55ac489296abca7e57ff19a8
+          created: 1745265036772
+          modified: 1745266459610
+          isPrivate: false
+          sortKey: -1745264932970
+        method: POST
+        body:
+          mimeType: application/json
+          text: |
+            {
+              "nome": "Ana Clara",
+              "telefone": 47987651234,
+              "endereco": "Rua João Gualberto, 89"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:5000/clientes/2
+        name: update
+        meta:
+          id: req_3b16dfff61044daf85c27457dececcaf
+          created: 1745265046437
+          modified: 1745266516853
+          isPrivate: false
+          sortKey: -1745264932895
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+
+            		"nome": "barbara",
+            		"telefone": 21314411,
+            		"endereco": "Avenida Joscarvi"
+            	}
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:5000/clientes/7
+        name: delete
+        meta:
+          id: req_b96c8cb3c1af42d38f12fa6456e4345d
+          created: 1745265054499
+          modified: 1745266551515
+          isPrivate: false
+          sortKey: -1745264932845
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Produtos
+    meta:
+      id: fld_ba8a2aab31064afaae0f839257fd3783
+      created: 1745265077362
+      modified: 1745265084778
+      sortKey: -1745264909466
+    children:
+      - url: http://localhost:5000/produtos
+        name: read
+        meta:
+          id: req_2d82c308c5444b04871acb40c11abb55
+          created: 1745265077363
+          modified: 1745266772217
+          isPrivate: false
+          sortKey: -1745264933045
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:5000/produtos/2
+        name: readOne
+        meta:
+          id: req_cd9e6050994d4ad194b3a45123790112
+          created: 1745265077364
+          modified: 1745266801558
+          isPrivate: false
+          sortKey: -1745264932995
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:5000/produtos/4
+        name: update
+        meta:
+          id: req_5498b2d373354c0099fc71d4cbd7196b
+          created: 1745265077365
+          modified: 1745266896982
+          isPrivate: false
+          sortKey: -1745264932895
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |
+            {
+              "nome": "Croissant de Queijo",
+              "preco": 6.00,
+              "descricao": "Croissant recheado com queijo minas BOMM",
+              "qtd_estoque": 40
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:5000/produtos
+        name: create
+        meta:
+          id: req_9d901d2fede8464e948875696c7d6265
+          created: 1745265077365
+          modified: 1745266864930
+          isPrivate: false
+          sortKey: -1745264932945
+        method: POST
+        body:
+          mimeType: application/json
+          text: |
+            {
+              "nome": "Croissant de Queijo",
+              "preco": 6.00,
+              "descricao": "Croissant recheado com queijo minas",
+              "qtd_estoque": 40
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:5000/produtos/4
+        name: delete
+        meta:
+          id: req_a9c94d0ac21b4dcea704b90f37600581
+          created: 1745265077366
+          modified: 1745266917009
+          isPrivate: false
+          sortKey: -1745264932845
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Funcionarios
+    meta:
+      id: fld_7d948cc44a1b483a8cec069332b6a5c1
+      created: 1745265100983
+      modified: 1745265150139
+      sortKey: -1745264909491
+    children:
+      - url: http://localhost:5000/funcionarios
+        name: read
+        meta:
+          id: req_0fe9c3cadd634f989234283ccc118879
+          created: 1745265100984
+          modified: 1745266575813
+          isPrivate: false
+          sortKey: -1745264933045
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:5000/funcionarios/5
+        name: readOne
+        meta:
+          id: req_ed0e2c73e274400897517392ce965389
+          created: 1745265100985
+          modified: 1745266687504
+          isPrivate: false
+          sortKey: -1745264932995
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:5000
+        name: update
+        meta:
+          id: req_fbf8ac6158a34d4ebba9b25d3b84f523
+          created: 1745265100986
+          modified: 1745265100986
+          isPrivate: false
+          sortKey: -1745264932895
+        method: PUT
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:5000/funcionarios
+        name: create
+        meta:
+          id: req_fa98ea494eb7498b87e163d9b24a32e2
+          created: 1745265100987
+          modified: 1745266708058
+          isPrivate: false
+          sortKey: -1745264932945
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	""
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:5000
+        name: delete
+        meta:
+          id: req_496530e6a8924db7921bf7b8296dabdd
+          created: 1745265100988
+          modified: 1745265100988
+          isPrivate: false
+          sortKey: -1745264932845
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Pedidos
+    meta:
+      id: fld_e8f05ba9a45240ee8bbbd9828e304205
+      created: 1745265112753
+      modified: 1745265112753
+      sortKey: -1745264909366
+    children:
+      - url: http://localhost:5000
+        name: readOne
+        meta:
+          id: req_42da0420143f453583638c419df98051
+          created: 1745265112754
+          modified: 1745265112754
+          isPrivate: false
+          sortKey: -1745264932995
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:5000
+        name: read
+        meta:
+          id: req_b3711b83fbb24f62ba080d8c94e1d9aa
+          created: 1745265112754
+          modified: 1745265112754
+          isPrivate: false
+          sortKey: -1745264933045
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:5000
+        name: update
+        meta:
+          id: req_627453bf8d254c06a56b1351429ce907
+          created: 1745265112755
+          modified: 1745265112755
+          isPrivate: false
+          sortKey: -1745264932895
+        method: PUT
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:5000
+        name: delete
+        meta:
+          id: req_9db3638a3dae463ba10e07729edf778c
+          created: 1745265112756
+          modified: 1745265112756
+          isPrivate: false
+          sortKey: -1745264932845
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:5000
+        name: create
+        meta:
+          id: req_cc662db75e19431f969a3454ae2cbe5c
+          created: 1745265112756
+          modified: 1745265112756
+          isPrivate: false
+          sortKey: -1745264932945
+        method: POST
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Estoque
+    meta:
+      id: fld_f1b5991891f24b1eb06db2b4dcd5ba37
+      created: 1745265135576
+      modified: 1745265135576
+      sortKey: -1745264909316
+    children:
+      - url: http://localhost:5000
+        name: readOne
+        meta:
+          id: req_2b16d22f0c9c4351a0ef65ae492fb276
+          created: 1745265135577
+          modified: 1745265135577
+          isPrivate: false
+          sortKey: -1745264932995
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:5000
+        name: read
+        meta:
+          id: req_19545efad4614c9882b1301e31e0a306
+          created: 1745265135578
+          modified: 1745265135578
+          isPrivate: false
+          sortKey: -1745264933045
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:5000
+        name: update
+        meta:
+          id: req_827ab9c59c604c3e89f07b4add60f432
+          created: 1745265135579
+          modified: 1745265135579
+          isPrivate: false
+          sortKey: -1745264932895
+        method: PUT
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:5000
+        name: delete
+        meta:
+          id: req_388a3a0fc4a846cfa608879716a99ca0
+          created: 1745265135580
+          modified: 1745265135580
+          isPrivate: false
+          sortKey: -1745264932845
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:5000
+        name: create
+        meta:
+          id: req_6cafb7e8a7244e8aa766658aa23647d0
+          created: 1745265135581
+          modified: 1745265135581
+          isPrivate: false
+          sortKey: -1745264932945
+        method: POST
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: ItensPedidos
+    meta:
+      id: fld_b834895bca964ca6b79e0e06a60dee21
+      created: 1745265144460
+      modified: 1745265144460
+      sortKey: -1745264909341
+    children:
+      - url: http://localhost:5000
+        name: readOne
+        meta:
+          id: req_9a5dc27a037e4fa895f4be37a2317b90
+          created: 1745265144461
+          modified: 1745265144461
+          isPrivate: false
+          sortKey: -1745264932995
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:5000
+        name: read
+        meta:
+          id: req_d7ccc7a37402492d84ec4c395c89111d
+          created: 1745265144462
+          modified: 1745265144462
+          isPrivate: false
+          sortKey: -1745264933045
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:5000
+        name: update
+        meta:
+          id: req_192416c051fb463cb40519f9dfe43ec1
+          created: 1745265144463
+          modified: 1745265144463
+          isPrivate: false
+          sortKey: -1745264932895
+        method: PUT
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:5000
+        name: delete
+        meta:
+          id: req_3ecb0207cb8f48de9c78e0a06aa3cdea
+          created: 1745265144464
+          modified: 1745265144464
+          isPrivate: false
+          sortKey: -1745264932845
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:5000
+        name: create
+        meta:
+          id: req_f743d6a0593a4de48137860d8dd7e22b
+          created: 1745265144465
+          modified: 1745265144465
+          isPrivate: false
+          sortKey: -1745264932945
+        method: POST
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - url: http://localhost:5000
+    name: Título
+    meta:
+      id: req_da0b2f1a9c81437db2b4e477616993f0
+      created: 1745265170018
+      modified: 1745265188119
+      isPrivate: false
+      sortKey: -1745265170018
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1745264779945
+    modified: 1745264779945
+environments:
+  name: Base Environment
+  meta:
+    id: env_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1745264779727
+    modified: 1745264779727
+    isPrivate: false
