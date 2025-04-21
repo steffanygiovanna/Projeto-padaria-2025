@@ -55,7 +55,7 @@ model Funcionario {
 }
 
 model MovimentoEstoque {
-  id             Int      @id @default(autoincrement())
+  estoque_id             Int      @id @default(autoincrement())
   produto_id     Int
   tipo           String   @db.VarChar(20) // 'entrada' ou 'saida'
   quantidade     Int
