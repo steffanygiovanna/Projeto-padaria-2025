@@ -3,29 +3,29 @@ const prisma = new PrismaClient();
 
 const create = async (req, res) => {
     try {
-        const pedido = await prisma.pedido.create({
+        const cliente = await prisma.cliente.create({
             data: req.body
         });
-        return res.status(201).json(pedido);
+        return res.status(201).json(cliente);
     } catch (error) {
         return res.status(400).json({ error: error.message });
     }
 }
 
 const read = async (req, res) => {
-    const clientes = await prisma.cliente.findMany();
-    res.json(clientes);
+    const cliente = await prisma.cliente.findMany();
+    res.json(cliente);
 }
 
 
 const readOne = async (req, res) => {
     try {
-        const pedido = await prisma.pedido.findUnique({
+        const cliente = await prisma.cliente.findUnique({
             where: {
                 cliente_id: Number(req.params.id)
             }
         });
-        return res.json(pedido);
+        return res.json(cliente);
     } catch (error) {
         return res.status(400).json({ error: error.message });
     }
@@ -33,13 +33,13 @@ const readOne = async (req, res) => {
 
 const update = async (req, res) => {
     try {
-        const pedido = await prisma.pedido.update({
+        const cliente = await prisma.cliente.update({
             where: {
                 cliente_id: Number(req.params.id)
             },
             data: req.body
         });
-        return res.status(202).json(pedido);
+        return res.status(202).json(cliente);
     } catch (error) {
         return res.status(400).json({ error: error.message });
     }
@@ -47,7 +47,7 @@ const update = async (req, res) => {
 
 const remove = async (req, res) => {
     try {
-        await prisma.pedido.delete({
+        await prisma.cliente.delete({
             where: {
                 cliente_id: Number(req.params.id)
             }

@@ -10,7 +10,7 @@ datasource db {
 model Cliente {
   cliente_id Int     @id @default(autoincrement())
   nome       String  @db.VarChar(100)
-  telefone   String  @db.VarChar(255)
+  telefone   Int  
   endereco   String? @db.VarChar(100)
   pedidos    Pedido[]
 }
