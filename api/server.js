@@ -8,6 +8,6 @@ app.use(cors());
 app.use(express.json());
 app.use(router);
 
-app.listen(5555,()=>{
+app.listen(5000,()=>{
     console.log('API respondendo em http://localhost:5000');
 });

@@ -13,16 +13,8 @@ const create = async (req, res) => {
 }
 
 const read = async (req, res) => {
-    try {
-        const produtos = await prisma.produto.findMany();
-        const total = produtos.reduce((soma, produto) => soma + Number(produto.valor), 0);
-        return res.json({
-            total,
-            produtos
-        });
-    } catch (error) {
-        return res.status(500).json({ error: error.message });
-    }
+    const clientes = await prisma.cliente.findMany();
+    res.json(clientes);
 }
 
 
