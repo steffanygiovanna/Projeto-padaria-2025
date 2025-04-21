@@ -3,10 +3,10 @@ const prisma = new PrismaClient();
 
 const create = async (req, res) => {
     try {
-        const cliente = await prisma.cliente.create({
+        const pedido = await prisma.pedido.create({
             data: req.body
         });
-        return res.status(201).json(cliente);
+        return res.status(201).json(pedido);
     } catch (error) {
         return res.status(400).json({ error: error.message });
     }
@@ -14,11 +14,11 @@ const create = async (req, res) => {
 
 const read = async (req, res) => {
     try {
-        const clientes = await prisma.cliente.findMany();
-        const total = clientes.reduce((soma, cliente) => soma + Number(cliente.valor), 0);
+        const pedidos = await prisma.pedido.findMany();
+        const total = pedidos.reduce((soma, pedido) => soma + Number(pedido.valor), 0);
         return res.json({
             total,
-            clientes
+            pedidos
         });
     } catch (error) {
         return res.status(500).json({ error: error.message });
@@ -28,12 +28,12 @@ const read = async (req, res) => {
 
 const readOne = async (req, res) => {
     try {
-        const cliente = await prisma.cliente.findUnique({
+        const pedido = await prisma.pedido.findUnique({
             where: {
-                cliente_id: Number(req.params.id)
+                pedido_id: Number(req.params.id)
             }
         });
-        return res.json(cliente);
+        return res.json(pedido);
     } catch (error) {
         return res.status(400).json({ error: error.message });
     }
@@ -41,13 +41,13 @@ const readOne = async (req, res) => {
 
 const update = async (req, res) => {
     try {
-        const cliente = await prisma.cliente.update({
+        const pedido = await prisma.pedido.update({
             where: {
-                cliente_id: Number(req.params.id)
+                pedido_id: Number(req.params.id)
             },
             data: req.body
         });
-        return res.status(202).json(cliente);
+        return res.status(202).json(pedido);
     } catch (error) {
         return res.status(400).json({ error: error.message });
     }
@@ -55,9 +55,9 @@ const update = async (req, res) => {
 
 const remove = async (req, res) => {
     try {
-        await prisma.cliente.delete({
+        await prisma.pedido.delete({
             where: {
-                cliente_id: Number(req.params.id)
+                pedido_id: Number(req.params.id)
             }
         });
         return res.status(204).send();
