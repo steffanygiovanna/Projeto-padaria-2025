@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="exemplo.css">
+    <link rel="shortcut icon" href="./assets/icone.png" type="image/x-icon">
+    <title>Aguardando resposta da API</title>
+</head>
+
+<body>
+    <header>
+        <nav id="sandwish">
+            <button onclick="itens.classList.remove('oculto')">=</button>
+        </nav>
+        <h1>Aguardando resposta da API</h1>
+        <nav>
+            <button onclick="novoCli.classList.remove('oculto')">Novo Cliente</button>
+            <button onclick="listarClientes.classList.remove('oculto');preencherClientes()">Listar Clientes</button>
+            <button onclick="listarPedidos.classList.remove('oculto');preencherPedidos()">Listar Pedidos</button>
+        </nav>
+        <nav id="itens" class="sandwish oculto">
+            <button onclick="novoCli.classList.remove('oculto')">Novo Cliente</button>
+            <button onclick="listarClientes.classList.remove('oculto');preencherClientes()">Listar Clientes</button>
+            <button onclick="listarPedidos.classList.remove('oculto');preencherPedidos()">Listar Pedidos</button>
+        </nav>
+    </header>
+    <main></main>
+    <footer>
+        <h2>By wellifabio</h2>
+        <p></p>
+    </footer>
+    <section id="novoCli" class="modal oculto">
+        <div class="janela">
+            <div>
+                <h2>Novo Cliente</h2>
+                <button onclick="window.location.reload()">X</button>
+            </div>
+            <form>
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" required>
+                <label for="cpf">CPF</label>
+                <input type="text" name="cpf">
+                <button type="submit">Salvar</button>
+            </form>
+        </div>
+    </section>
+    <section id="listarClientes" class="modal oculto">
+        <div class="janela">
+            <div>
+                <h2>Clientes</h2>
+                <button onclick="window.location.reload()">X</button>
+            </div>
+            <span>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>CPF</th>
+                            <th>Nome</th>
+                            <th>Telefones</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </span>
+        </div>
+    </section>
+    <section id="listarPedidos" class="modal oculto">
+        <div class="janela">
+            <div>
+                <h2>Pedidos</h2>
+                <button onclick="window.location.reload()">X</button>
+            </div>
+            <span>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Cliente Id</th>
+                            <th>Data</th>
+                            <th>Hora</th>
+                            <th>Produto</th>
+                            <th>Quantidade</th>
+                            <th>Preço</th>
+                            <th>Subtotal</th>
+                            <th>Remover</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </span>
+        </div>
+    </section>
+</body>
+<script src="exemplo.js"></script>
+
+</html>
