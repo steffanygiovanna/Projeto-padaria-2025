@@ -4,22 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../docs/Imagem/download2.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Home.css">
     <title>Padaria Paladar Nobre</title>
 </head>
 <body>
     <header>
-        <nav2>
-            <a href="carrinho.html"><button onclick="novacom.classList.remove('oculto')"><img src="../docs/Imagem/carrinho-carrinho.png"> </button></a>
-        </nav>
+        <a href="carrinho.html">
+            <button class="carrinho-btn" aria-label="Abrir carrinho">
+                <img src="../docs/Imagem/carrinho-carrinho1-removebg-preview.png" alt="Ícone do carrinho" class="carrinho-img">
+            </button>
+        </a>
+
         <h2>Paladar Nobre</h2>
 
         <nav>
             <button onclick="menu.classList.remove('oculto')">=</button>
-            <button onclick="cardapio.classList.remove('oculto')">Cardápio</button>
-            <button onclick="login.classList.remove('oculto')">Entrar ou Cadastrar</button>
-            <!-- <button onclick="cadastro.classList.remove('oculto')">Cadastro</button>
-            <button onclick="login.classList.remove('oculto')">Login</button> -->
+            <a href="cardapio.html"><button onclick="cardapio.classList.remove('oculto')" aria-label="Abrir cardápio">Cardápio</button></a>
+            <a href="cadastro.html"> <button onclick="login.classList.remove('oculto')" aria-label="Entrar ou cadastrar">Entrar ou Cadastrar</button></a>
         </nav>
     </header>
 
@@ -27,6 +28,21 @@
         By: Steffany, Thamye, João Vitor, Rebeca e Pedro H.!
     </footer>
 
+    <section id="menu" class="modal oculto">
+        <div class="janela">
+            <div>
+                <h2>Menu</h2>
+                <button onclick="window.location.reload()">X</button>
+            </div>
+            <form>
+                <button onclick="inicio">Inicio</button>
+                <button onclick="cardapio">Cardápio</button>
+                <button onclick="login">Cadastrar</button>
+                <button onclick="login">entrar</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>
