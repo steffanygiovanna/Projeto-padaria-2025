@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "nome": "Pão Francês",
+        "descricao": "Pão quentinho e crocante, ideal para o café da manhã",
+        "preco": 0.80,
+        "peso": 0.1,
+        "frete": 0.05,
+        "imagem": "https://static.itdg.com.br/images/640-440/c1d1963db4275577c710ee2b81bfa27f/277270-original.jpg"
+    },
+    {
+        "id": 2,
+        "nome": "Pão de Queijo",
+        "descricao": "Delicioso pão de queijo, assado na hora",
+        "preco": 2.50,
+        "peso": 0.15,
+        "frete": 0.1,
+        "imagem": "https://moinhoglobo.com.br/wp-content/uploads/2016/03/44-p%C3%A3o-de-queijo.jpg"
+    },
+    {
+        "id": 3,
+        "nome": "Bolo de Chocolate",
+        "descricao": "Bolo fofinho de chocolate com cobertura cremosa",
+        "preco": 15.00,
+        "peso": 0.8,
+        "frete": 1.0,
+        "imagem": "https://www.estadao.com.br/resizer/v2/FIVYQFU6J5ND3PYRA6XQHR4NW4.jpg?quality=80&auth=04a93b8f4c288302da64fd8a96da7bb7cc11dff70430e4ba66587218d5b6011f&width=720&height=503&focal=0,0"
+    },
+    {
+        "id": 4,
+        "nome": "Biscoito de Polvilho",
+        "descricao": "Biscoito crocante e leve, perfeito para acompanhar o café",
+        "preco": 3.00,
+        "peso": 0.2,
+        "frete": 0.1,
+        "imagem": "https://images-americanas.b2w.io/produtos/3305591083/imagens/biscoito-polvilho-sal-100g-cassini/3305591083_1_large.jpg"
+    },
+    {
+        "id": 5,
+        "nome": "Coxinha de Frango",
+        "descricao": "Coxinha de frango, recheada e empanada, frita na hora",
+        "preco": 4.00,
+        "peso": 0.3,
+        "frete": 0.2,
+        "imagem": "https://blog.vapza.com.br/wp-content/uploads/2020/10/coxinha-de-frango.jpg"
+    },
+    {
+        "id": 6,
+        "nome": "Pão Doce",
+        "descricao": "Pão doce recheado com goiabada, uma delícia",
+        "preco": 1.50,
+        "peso": 0.2,
+        "frete": 0.05,
+        "imagem": "https://static.itdg.com.br/images/1200-630/4944f7bea3693db2d523e22b87d91739/pao-doce-mg-9195.jpg"
+    }
+]
