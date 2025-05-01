@@ -29,7 +29,6 @@ main{
     justify-content: flex-start;
     align-items: center;
     gap: 10px;
-    background-color: var(--c5);
     color: var(--c1);
     overflow-y: auto;
 }
@@ -46,6 +45,24 @@ table{
         text-align: center;
     }
 }
+
+.btn-voltar {
+    background-color: var(--c3);
+    color: var(--c2);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-voltar:hover {
+    background-color: var(--c3);
+    color: var(--c2);
+    transform: scale(1.05);
+}
+
 
 @media screen and (max-width: 700px) {
     thead{
