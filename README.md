@@ -17,7 +17,7 @@
 - [ ] **Protótipo** funcional
 - [X] Elencar os **requisitos funcionais** com diagramas com [DCU (Diagrama de casos de Uso)](https://github.com/wellifabio/senai2024/tree/main/ds/3des/03-rms/aula02)
 - [ ] Modelar o banco de dados MER x DER Modelo conceitual
-- [ ] Cadastrar os integrantes do grupo nas ferramentas de gestão de projeto escolhida Trello, Jira, Asana, etc.
+- [x] Cadastrar os integrantes do grupo nas ferramentas de gestão de projeto escolhida Trello, Jira, Asana, etc.
 
 ## Padaria (Trello)
 ![](./docs/Trello.png)
