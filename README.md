@@ -6,9 +6,7 @@
 - João Angra
 - Thamye Souza
 - Pedro Oliveira
-- TEstando o commit
-- teste
-
+  
 #### Sprint atual
 - [ ] Modelar o negócio no **[Canvas](https://wellifabio.github.io/canvas/)**
 - [ ] Criar um cronograma **[Gráfico Gant](https://wellifabio.github.io/gantt/)**
