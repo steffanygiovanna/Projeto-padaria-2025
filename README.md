@@ -19,5 +19,17 @@
 - [ ] Modelar o banco de dados MER x DER Modelo conceitual
 - [ ] Cadastrar os integrantes do grupo nas ferramentas de gestão de projeto escolhida Trello, Jira, Asana, etc.
 
+## Padaria (Trello)
+![](./docs/Trello.png)
+
+
 ## Padaria (Diagramas de Casos de Uso)
-![Padaria](./docs/Diagrama%20Cantina.png)
+![](./docs/Diagrama%20Cantina.png)
+
+## Padaria (Canvas)
+![](./docs/Canvas.png)
+
+## Padaria (Gantt)
+![](./docs/Gantt.png)
+
+
