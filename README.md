@@ -1,11 +1,11 @@
 # Projeto-padaria-2025
 
 #**Integrantes**
-- Rebeca
-- Steffany
+- Rebeca Lima
+- Steffany Souza
 - João Angra
-- Thamye
-- Pedro Henrique 
+- Thamye Souza
+- Pedro Oliveira
 
 #### Sprint atual
 - [ ] Modelar o negócio no **[Canvas](https://wellifabio.github.io/canvas/)**
