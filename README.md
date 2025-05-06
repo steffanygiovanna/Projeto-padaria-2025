@@ -10,7 +10,7 @@
 #### Sprint atual
 - [ ] Modelar o negócio no **[Canvas](https://wellifabio.github.io/canvas/)**
 - [ ] Criar um cronograma **[Gráfico Gant](https://wellifabio.github.io/gantt/)**
-- [ ] Criar um repositório no **github** com o nome do projeto ou tcc-nomeprojeto e adicionar os integrantes do grupo como colaboradores.
+- [x] Criar um repositório no **github** com o nome do projeto ou tcc-nomeprojeto e adicionar os integrantes do grupo como colaboradores.
     - Acrescentar um README.md com **link** para todas as **entregas**
     - Poderá criar outros repositórios separados para back-end, front-end, mobile, etc porém todos os links devem estar no README do repositório principal
     - Todo o documental do projeto, diagramas, wireframes e documento do projeto ABNT devem estar em uma pasta chamada **./docs**
