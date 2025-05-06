@@ -8,7 +8,7 @@
 - Pedro Oliveira
   
 #### Sprint atual
-- [x] Modelar o negócio no **[Canvas](https://wellifabio.github.io/canvas/)**
+- [ ] Modelar o negócio no **[Canvas](https://wellifabio.github.io/canvas/)**
 - [ ] Criar um cronograma **[Gráfico Gant](https://wellifabio.github.io/gantt/)**
 - [x] Criar um repositório no **github** com o nome do projeto ou tcc-nomeprojeto e adicionar os integrantes do grupo como colaboradores.
     - Acrescentar um README.md com **link** para todas as **entregas**
