@@ -1,12 +1,12 @@
 # Projeto-padaria-2025
 
 #**Integrantes**
-- Rebeca
-- Steffany
+- Rebeca Lima
+- Steffany Souza
 - João Angra
-- Thamye
+- Thamye Souza
 - Pedro Oliveira
-
+  
 #### Sprint atual
 - [ ] Modelar o negócio no **[Canvas](https://wellifabio.github.io/canvas/)**
 - [ ] Criar um cronograma **[Gráfico Gant](https://wellifabio.github.io/gantt/)**
@@ -18,3 +18,6 @@
 - [ ] Elencar os **requisitos funcionais** com diagramas com [DCU (Diagrama de casos de Uso)](https://github.com/wellifabio/senai2024/tree/main/ds/3des/03-rms/aula02)
 - [ ] Modelar o banco de dados MER x DER Modelo conceitual
 - [ ] Cadastrar os integrantes do grupo nas ferramentas de gestão de projeto escolhida Trello, Jira, Asana, etc.
+
+## Padaria (Diagramas de Casos de Uso)
+![Padaria](./docs/Diagrama%20Cantina.png)
