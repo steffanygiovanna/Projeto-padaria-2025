@@ -6,6 +6,7 @@
 - João Angra
 - Thamye Souza
 - Pedro Oliveira
+- TEstando o commit
 
 #### Sprint atual
 - [ ] Modelar o negócio no **[Canvas](https://wellifabio.github.io/canvas/)**
