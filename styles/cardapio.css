@@ -364,8 +364,29 @@ input{
     display: none;
 }
 
-@media screen and (max-width: 770px){
-    .janela{
-        min-width: 90%;
+@media screen and (max-width: 770px) {
+    header, footer {
+        flex-direction: column;
+        gap: 10px;
+        height: auto;
+        padding: 10px;
     }
-} 
+
+    .janela {
+        width: 90%;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    button {
+        font-size: 1em;
+        padding: 8px 15px;
+    }
+
+    input {
+        width: 90%;
+    }
+}
