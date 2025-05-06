@@ -5,7 +5,7 @@
 - Steffany
 - João Angra
 - Thamye
-- Pedro Oliveira
+- Pedro Henrique 
 
 #### Sprint atual
 - [ ] Modelar o negócio no **[Canvas](https://wellifabio.github.io/canvas/)**
