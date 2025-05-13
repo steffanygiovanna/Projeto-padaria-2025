@@ -22,9 +22,11 @@
 ## Padaria (Trello)
 ![](./docs/Trello.png)
 
-
 ## Padaria (Diagramas de Casos de Uso)
 ![](./docs/Diagrama%20Cantina.png)
+
+## Padaria (DER)
+![](./docs/DER%20padaria.png)
 
 ## Padaria (Canvas)
 ![](./docs/Canvas.png)
