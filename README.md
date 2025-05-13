@@ -14,9 +14,9 @@
     - Acrescentar um README.md com **link** para todas as **entregas**
     - Poderá criar outros repositórios separados para back-end, front-end, mobile, etc porém todos os links devem estar no README do repositório principal
     - Todo o documental do projeto, diagramas, wireframes e documento do projeto ABNT devem estar em uma pasta chamada **./docs**
-- [ ] **Protótipo** funcional
+- [x] **Protótipo** funcional inicial (Com Figma - Mobile e Web))
 - [X] Elencar os **requisitos funcionais** com diagramas com [DCU (Diagrama de casos de Uso)](https://github.com/wellifabio/senai2024/tree/main/ds/3des/03-rms/aula02)
-- [ ] Modelar o banco de dados MER x DER Modelo conceitual
+- [X] Modelar o banco de dados MER x DER Modelo conceitual
 - [x] Cadastrar os integrantes do grupo nas ferramentas de gestão de projeto escolhida Trello, Jira, Asana, etc.
 
 ## Padaria (Trello)
