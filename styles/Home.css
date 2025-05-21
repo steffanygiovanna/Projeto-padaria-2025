@@ -15,6 +15,8 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    font-family: sans-serif;
+    background-color: #ffffff;
 }
 
 header, footer {
@@ -150,4 +152,128 @@ input {
     input {
         width: 90%;
     }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.faixa-fundo {
+    background-size: cover;
+    background-position: center;
+    padding: 120px 0 100px 0;
+}
+
+.informacoes-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #ecebeb;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    border-radius: 12px;
+    position: relative;
+    padding: 50px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-central {
+    position: absolute;
+    top: -40px;
+    background: #fef4e8;
+    padding: 8px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.logo-central img {
+    height: 100px;
+}
+
+.conteudo {
+    display: flex;
+    width: 100%;
+    margin-top: 60px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.esquerda {
+    width: 48%;
+}
+
+.titulo {
+    font-size: 28px;
+    color: #d49e57;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.endereco {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.linha-vertical {
+    width: 2px;
+    background-color: #ccc;
+    height: 160px;
+    margin: 0 20px;
+}
+
+.direita {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.botao-pontos {
+    background-color: #000000;
+    color: white;
+    padding: 6px 10px;
+    border: none;
+    font-weight: bold;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.botao-pontos .gif-confete {
+    width: 35px;
+    height: 35px;
+}
+
+.linha-status {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.bolinha-verde {
+    width: 10px;
+    height: 10px;
+    background-color: #00c853;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.animada {
+    animation: pulsar 1.2s infinite;
+}
+
+@keyframes pulsar {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.5); opacity: 0.6; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.texto-aberto {
+    font-weight: bold;
+    color: #069c44;
 }

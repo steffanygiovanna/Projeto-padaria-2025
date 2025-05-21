@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,11 +18,43 @@
         <h1>Paladar Nobre</h1>
 
         <nav>
-            <a href="cardapio.html"><button onclick="cardapio.classList.remove('oculto')" aria-label="Abrir cardápio">Cardápio</button></a>
-            <a href="cadastro.html"> <button onclick="login.classList.remove('oculto')" aria-label="Entrar ou cadastrar">Entrar ou Cadastrar</button></a>
+            <a href="cardapio.html"><button aria-label="Abrir cardápio">Cardápio</button></a>
+            <a href="cadastro.html"><button aria-label="Entrar ou cadastrar">Entrar ou Cadastrar</button></a>
         </nav>
     </header>
 
+    <div class="faixa-fundo">
+        <div class="informacoes-container">
+            <div class="logo-central">
+                <img src="../docs/Imagem/download2.png" alt="Logo Paladar Nobre">
+            </div>
+
+            <div class="conteudo">
+                <div class="esquerda">
+                    <h1 class="titulo">Paladar Nobre</h1>
+                    <p class="endereco">Rua dos Sabores, 1234 - Centro, Cidade Delícia, SP 00000-000</p>
+                </div>
+
+                <div class="linha-vertical"></div>
+
+                <div class="direita">
+                    <button class="botao-pontos">
+                        <img src="../docs/Imagem/confetti.gif" alt="Confete" class="gif-confete">
+                        CLUBE DE PONTOS
+                    </button>
+                    <br>
+                    <div class="linha-status">
+                        <span class="bolinha-verde animada"></span>
+                        <span class="texto-aberto">Aberto • disponível para pedidos</span>
+                    </div>
+
+                    <p><strong>Valor mínimo para pedidos:</strong> a partir de R$ 20,00</p>
+                    <br>
+                    <p><strong>Tempo para entrega:</strong> 45 - 60 min.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <section id="menu" class="modal oculto">
         <div class="janela">
@@ -31,16 +63,16 @@
                 <button onclick="window.location.reload()">X</button>
             </div>
             <form>
-                <button onclick="inicio">Inicio</button>
-                <button onclick="cardapio">Cardápio</button>
-                <button onclick="login">Cadastrar</button>
-                <button onclick="login">entrar</button>
+                <button>Inicio</button>
+                <button>Cardápio</button>
+                <button>Cadastrar</button>
+                <button>Entrar</button>
             </form>
         </div>
     </section>
-    
+
     <footer>
-       <h2> By Steffany, Thamye, João Victor, Rebeca e Pedro O.!</h2>
+        <h2>By Steffany, Thamye, João Victor, Rebeca e Pedro O.!</h2>
     </footer>
 
     <script src="../scripts/Home.js"></script>
