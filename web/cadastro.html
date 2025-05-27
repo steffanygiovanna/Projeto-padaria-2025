@@ -3,50 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login e Cadastro</title>
-    <link rel="shortcut icon" href="../docs/Imagem/download2.png" type="image/x-icon">
-    <link rel="stylesheet" href="../styles/cadastro.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> <!-- Fonte Roboto -->
+    <link rel="stylesheet" href="/styles/cadastro.css">
+    <title>Login - Benjamin</title>
 </head>
 <body>
-
-<main>
-    <div class="contenedor__todo">
-
-        <div class="caja__trasera">
-            <div class="caja__trasera-login">
-                <h3>Já tem uma conta?</h3>
-                <p>Faça login para entrar</p>
-                <button id="btn__iniciar-sesion">Login</button>
-            </div>
-            <div class="caja__trasera-register">
-                <h3>Não tem uma conta?</h3>
-                <p>Registre-se para começar</p>
-                <button id="btn__registrarse">Cadastrar</button>
-            </div>
-        </div>
-
-        <div class="contenedor__login-register">
-
-            <form action="" class="formulario__login">
-                <h2>Login</h2>
-                <input type="text"  id="loginEmail" placeholder="Email" required>
-                <input type="password" id="loginSenha" placeholder="Senha" required>
-                <button type="submit">Entrar</button>
+    <div class="container">
+        <div class="login-box">
+            <img src="/docs/logoPN.png" alt="" srcset="">
+            <form>
+                <div class="textbox">
+                    <input type="text" placeholder="Login" required>
+                </div>
+                <div class="textbox">
+                    <input type="password" placeholder="Senha" required>
+                    <span class="toggle-password"></span>
+                </div>
+                <div class="links">
+                    <a href="#">Primeiro acesso</a> / <a href="#">Esqueceu sua senha?</a>
+                </div>
+                <button type="submit" class="btn">Enviar</button>
             </form>
-
-            <form action="" class="formulario__register">
-                <h2>Cadastrar</h2>
-                <input type="text" id="cadastroNome" placeholder="Nome Completo" required>
-                <input type="email" id="cadastroEmail" placeholder="Email" required>
-                <input type="password" id="cadastroSenha" placeholder="Senha" required>
-                <button type="submit">Registrar</button>
-            </form>
-
+            <div class="version-info">
+                <p>Hash da versão: 02c6c63</p>
+                <p>Versão do projeto: 8673</p>
+            </div>
         </div>
     </div>
-</main>
-
-<script src="../scripts/cadastro.js"></script>
 </body>
 </html>
