@@ -26,14 +26,14 @@ body {
 header {
     display: flex;
     align-items: center;
-    background-color: #000000; /* Cor de fundo similar ao seu */
+    background-color: #000000; 
     padding: 1px 100%;
 }
 
 
 
 .logo img {
-    height: 90px; /* Ajuste conforme necessário */
+    height: 90px; 
     margin-right: 20px;
 }
 
@@ -56,8 +56,8 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #D5CBA4; /* Cor do texto */
-    font-size: 17px; /* Ajuste conforme necessário */
+    color: #D5CBA4; 
+    font-size: 17px; 
 }
 
 
@@ -66,10 +66,10 @@ nav ul li a::after {
     content: '';
     width: 100%;
     height: 1px;
-    background: white; /* Cor da linha branca */
+    background: white; 
     position: absolute;
     left: 0;
-    bottom: -5px; /* Ajuste a posição da linha */
+    bottom: -5px; 
     transform: scaleX(0);
     transition: transform 0.3s ease;
 }
@@ -83,7 +83,7 @@ nav ul li:hover a::after {
 
 
 nav ul li:hover a {
-    text-decoration: none; /* Evita sublinhado ao passar o mouse */
+    text-decoration: none; 
 }
 button {
     background-color: var(--c3);
