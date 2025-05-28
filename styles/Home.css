@@ -11,16 +11,62 @@ body {
     width: 100vw;
     height: 100vh;
     display: flex;
-    background-image: url(../docs/BG3.png);
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     font-family: sans-serif;
-    background-color: #ffffff;
+    background-color: #000000;
 }
 
 
 
+.about .row{
+    display: flex;
+    align-items: center;
+    background:var(--black);
+    flex-wrap: wrap;
+}
+
+.about .row .image{
+    flex:2 0 0rem;
+}
+
+.about .row .image img{
+    width: 100%;
+}
+.about .row .content{
+    background-color: #000000;
+    flex:1 0 40rem;
+    padding:7.25rem;
+}
+
+.about .row .content h3{
+    font-size: 3rem;
+    color:#fff;
+}
+
+.about .row .content p{
+    font-size: 1.6rem;
+    color:#ccc;
+    padding:1rem 0;
+    line-height: 1.8;
+}
+
+
+
+
+.heading{
+    text-align: center;
+    color:#fff;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 3rem;
+}
+
+.heading span{
+    color:var(--c4);
+    text-transform: uppercase;
+}
 
 
 header {
@@ -188,9 +234,16 @@ input {
 }
 
 .faixa-fundo {
-    background-image: url(/docs/fundo.padaria.png);
-    padding: 200px 500px 350px 550px;
-    display: inline-block;
+    background-image: url(/docs/tela\ principal\ faixa.png);
+    background-repeat: no-repeat;
+    justify-content:space-around;
+    background-position: absolute;
+    background-size: cover; 
+    padding: 100px 90px 12px 190px;
+    height: 50%;
+    width: 100%;
+    transform: translate(0,-0%);
+
 }
 
 .informacoes-container {
