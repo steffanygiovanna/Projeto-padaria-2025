@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #fadc9b;
+    /* background-color:; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,8 +12,9 @@ body {
 
 .container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: start;
+    align-items: start;
+    transform: translate(-100%, -0%);
 }
 
 
