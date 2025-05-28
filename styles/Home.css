@@ -103,7 +103,7 @@ button:hover {
 }
 
 .janela {
-    width: 40%;
+    width: 35%;
     height: fit-content;
     background-color: var(--c4);
     box-shadow: 0 0 5px var(--t1);
@@ -186,20 +186,21 @@ input {
 }
 
 .faixa-fundo {
-    background-size: cover;
-    background-position: center;
-    padding: 120px 0 100px 0;
+    background-image: url(/docs/fundo.padaria.png);
+
+    padding: 15px 30px;
+    display: inline-block;
 }
 
 .informacoes-container {
     width: 90%;
     max-width: 1000px;
-    margin: 0 auto;
+    margin:  auto;
     background: #ecebeb;
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     border-radius: 12px;
     position: relative;
-    padding: 50px 60px;
+    padding: 20px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -209,7 +210,7 @@ input {
     position: absolute;
     top: -40px;
     background: #fef4e8;
-    padding: 8px;
+    padding: 5px;
     border-radius: 12px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
@@ -219,11 +220,11 @@ input {
 }
 
 .conteudo {
-    display: flex;
-    width: 100%;
+    display:flex;
+    width: 80%;
     margin-top: 60px;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .esquerda {
@@ -259,7 +260,7 @@ input {
 .botao-pontos {
     background-color: #000000;
     color: white;
-    padding: 6px 10px;
+    padding: 6px 8px;
     border: none;
     font-weight: bold;
     border-radius: 4px;
@@ -272,6 +273,7 @@ input {
 .botao-pontos .gif-confete {
     width: 35px;
     height: 30px;
+    border-radius: 4px;
 }
 
 .linha-status {
