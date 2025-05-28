@@ -26,14 +26,16 @@ body {
 header {
     display: flex;
     align-items: center;
-    background-color: #000000; 
-    padding: 1px 100%;
+    justify-content: center;
+    width: 100%;
+    gap: 1px;
+    background-color: var(--c2);
+    padding: 15px 2%;
 }
 
 
-
 .logo img {
-    height: 90px; 
+    height: 67px; 
     margin-right: 20px;
 }
 
@@ -187,8 +189,7 @@ input {
 
 .faixa-fundo {
     background-image: url(/docs/fundo.padaria.png);
-
-    padding: 15px 30px;
+    padding: 200px 500px 350px 550px;
     display: inline-block;
 }
 
