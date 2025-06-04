@@ -8,12 +8,12 @@
 - Pedro Oliveira
 
   ## Backlog do Projeto final
-#### Sprint inicial
+#### 1º Sprint
 - [x] Escolher a metodologia **SCRUM, KANBAN, XP, outras**
 - [x] Definir **Papéis e responsabilidades**
 - [x] Apresentar a proposta inicial
   
-#### Sprint atual
+#### 2º Sprint 
 - [X] Modelar o negócio no **[Canvas](https://wellifabio.github.io/canvas/)**
 - [X] Criar um cronograma **[Gráfico Gant](https://wellifabio.github.io/gantt/)**
 - [x] Criar um repositório no **github** com o nome do projeto ou tcc-nomeprojeto e adicionar os integrantes do grupo como colaboradores.
@@ -27,7 +27,7 @@
 - [x] Cadastrar os integrantes do grupo nas ferramentas de gestão de projeto escolhida Trello, Jira, Asana, etc.
 
 
-## 3º Sprint
+## 3º Sprint (Atual)
 ### Apresentação em 18/06
 
 - [ ] Iniciar a codificação/desenvolvimento **Banco de dados**
