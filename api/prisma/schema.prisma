@@ -13,7 +13,6 @@ model Cliente {
   telefone      Int
   endereco      String?       @db.VarChar(100)
   pedidos       Pedido[]
-  atendimentos  Atendimento[]  // Relação com Funcionário
 }
 
 model Produto {
@@ -22,9 +21,8 @@ model Produto {
   preco         Decimal          @db.Decimal(10,2)
   descricao     String           @db.VarChar(255)
   qtd_estoque   Int
-  itens         Item_Pedido[]       // Relação com Pedido
-  movimentos    MovimentoEstoque[]  // Movimento de estoque
-  entregas      Entrega[]           // Relação com Fornecedor
+  itens         Item_Pedido[]       
+  movimentos    MovimentoEstoque[]  
 }
 
 model Pedido {
@@ -54,7 +52,6 @@ model Funcionario {
   nome           String        @db.VarChar(100)
   cargo          String        @db.VarChar(100)
   telefone       String        @db.VarChar(255)
-  atendimentos   Atendimento[] // Relação com Cliente
 }
 
 model MovimentoEstoque {
@@ -70,26 +67,4 @@ model Fornecedor {
   fornecedor_id Int        @id @default(autoincrement())
   nome          String     @db.VarChar(100)
   telefone      String     @db.VarChar(20)
-  entregas      Entrega[]
-}
-
-model Entrega {
-  entrega_id     Int         @id @default(autoincrement())
-  fornecedor_id  Int
-  produto_id     Int
-  data_entrega   DateTime    @default(now())
-  quantidade     Int
-
-  fornecedor     Fornecedor  @relation(fields: [fornecedor_id], references: [fornecedor_id])
-  produto        Produto     @relation(fields: [produto_id], references: [produto_id])
-}
-
-model Atendimento {
-  atendimento_id  Int          @id @default(autoincrement())
-  cliente_id      Int
-  funcionario_id  Int
-  data            DateTime     @default(now())
-
-  cliente         Cliente      @relation(fields: [cliente_id], references: [cliente_id])
-  funcionario     Funcionario  @relation(fields: [funcionario_id], references: [funcionario_id])
 }
