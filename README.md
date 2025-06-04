@@ -8,12 +8,12 @@
 - Pedro Oliveira
 
   ## Backlog do Projeto final
-#### 1º Sprint
+### 1º Sprint
 - [x] Escolher a metodologia **SCRUM, KANBAN, XP, outras**
 - [x] Definir **Papéis e responsabilidades**
 - [x] Apresentar a proposta inicial
   
-#### 2º Sprint 
+### 2º Sprint 
 - [X] Modelar o negócio no **[Canvas](https://wellifabio.github.io/canvas/)**
 - [X] Criar um cronograma **[Gráfico Gant](https://wellifabio.github.io/gantt/)**
 - [x] Criar um repositório no **github** com o nome do projeto ou tcc-nomeprojeto e adicionar os integrantes do grupo como colaboradores.
@@ -27,8 +27,8 @@
 - [x] Cadastrar os integrantes do grupo nas ferramentas de gestão de projeto escolhida Trello, Jira, Asana, etc.
 
 
-## 3º Sprint (Atual)
-### Apresentação em 18/06
+### 3º Sprint (Atual)
+#### Apresentação em 18/06
 
 - [ ] Iniciar a codificação/desenvolvimento **Banco de dados**
 - [X] Iniciar a codificação/desenvolvimento **Back-end**
@@ -39,7 +39,7 @@
 - [ ] Análise de Viabilidade com Matriz SWOT
 - [ ] Triângulo da qualidade do Projeto (Escopo, Prazo e Custo)
 
-## Backlog desta Sprint
+### Backlog desta Sprint
 - [ ] Modelar o negócio no **[Canvas](https://wellifabio.github.io/canvas/)**
 - [ ] Criar um cronograma **[Gráfico Gant](https://wellifabio.github.io/gantt/)**
 - [ ] Criar um repositório no **github** e adicionar os integrantes do grupo como colaboradores.
@@ -56,6 +56,10 @@
 
 ## Padaria (Diagramas de Casos de Uso)
 ![](./docs/Diagrama%20Cantina.png)
+
+## Padaria (Diagrama de Classes)
+![](./docs/Diagrama_de_Classes.png)
+
 
 ## Padaria (DER)
 ![](./docs/DER%20padaria.png)
