@@ -1,6 +1,6 @@
 # Projeto-padaria-2025
 
-#**Integrantes**
+# **Integrantes**
 - Rebeca Lima
 - Steffany Souza
 - João Angra
@@ -27,7 +27,7 @@
 - [x] Cadastrar os integrantes do grupo nas ferramentas de gestão de projeto escolhida Trello, Jira, Asana, etc.
 
 
-## Escopo da 3º Sprint
+## 3º Sprint
 ### Apresentação em 18/06
 
 - [ ] Iniciar a codificação/desenvolvimento **Banco de dados**
