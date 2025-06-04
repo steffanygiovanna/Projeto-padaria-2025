@@ -177,3 +177,20 @@ Usuário e senha por perfil.
 - Funcionário: gestão de clientes, pedidos, produtos, entregas.  
 - Gerente: acesso total, inclusive gestão de funcionários e fornecedores.  
 *Prioridade*: [x] Essencial [ ] Importante [ ] Desejável
+
+
+### Requisito não funcional
+
+- [RN001] Linguagem de programação TypeScript  
+- [RN002] Framework de back-end Express.js  
+- [RN003] ORM Prisma  
+- [RN004] IDE de desenvolvimento WebStorm  
+- [RN005] IDE de testes Insomnia  
+- [RN006] Banco de dados PostgreSQL  
+- [RN007] Autenticação com OAuth 2.0 (login com Google)  
+- [RN008] Armazenamento em nuvem AWS S3 para imagens dos produtos  
+- [RN009] Logs e monitoramento com LogRocket  
+- [RN010] Hospedagem no Heroku  
+- [RN011] Interface criada com Vue.js  
+- [RN012] Tempo de resposta do servidor inferior a 300ms  
+- [RN013] Interface com acessibilidade (contraste, leitura por teclado, etc.)
