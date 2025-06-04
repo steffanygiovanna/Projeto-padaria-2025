@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,39 +9,75 @@
 </head>
 <body>
     <header>
-        <a href="carrinho.html">
-            <button class="carrinho-btn" aria-label="Abrir carrinho">
-                <img src="../docs/Imagem/carrinho-carrinho1-removebg-preview.png" alt="Ícone do carrinho" class="carrinho-img">
-            </button>
-        </a>
-
-        <h1>Paladar Nobre</h1>
-
+        <div class="logo">
+            <img src="../docs/logoPN.png" alt="Logo">
+        </div>
         <nav>
-            <button onclick="menu.classList.remove('oculto')">=</button>
-            <a href="cardapio.html"><button onclick="cardapio.classList.remove('oculto')" aria-label="Abrir cardápio">Cardápio</button></a>
-            <a href="cadastro.html"> <button onclick="login.classList.remove('oculto')" aria-label="Entrar ou cadastrar">Entrar ou Cadastrar</button></a>
+            <ul>
+                <li><a href="cardapio.html">Nosso Cardápio</a></li>
+                <li><a href="#">A Padaria</a></li>
+                <li><a href="#">Fale Conosco</a></li>
+                <li><a href="cadastro.html">Cadastro & Login</a></li>
+            </ul>
         </nav>
     </header>
 
-
-    <section id="menu" class="modal oculto">
-        <div class="janela">
-            <div>
-                <h2>Menu</h2>
-                <button onclick="window.location.reload()">X</button>
+    <div class="faixa-fundo">
+        <div class="informacoes-container">
+            <div class="logo-central">
+                <img src="../docs/Imagem/download2.png" alt="Logo Paladar Nobre">
             </div>
-            <form>
-                <button onclick="inicio">Inicio</button>
-                <button onclick="cardapio">Cardápio</button>
-                <button onclick="login">Cadastrar</button>
-                <button onclick="login">entrar</button>
-            </form>
+            <div class="conteudo">
+                <div class="esquerda">
+                    <h1 class="titulo">Paladar Nobre</h1>
+                    <p class="endereco">Rua dos Sabores, 1234 - Centro, Cidade Delícia, SP 00000-000</p>
+                </div>
+                <div class="linha-vertical"></div>
+                <div class="direita">
+                    <button class="botao-pontos">
+                        <img src="../docs/confete.gif" alt="Confete" class="gif-confete">
+                        CLUBE DE PONTOS
+                    </button>
+                    <div class="linha-status">
+                        <span class="bolinha-verde animada"></span>
+                        <span class="texto-aberto">Aberto • disponível para pedidos</span>
+                    </div>
+                    <p><strong>Valor mínimo para pedidos:</strong> a partir de R$ 20,00</p>
+                    <p><strong>Tempo para entrega:</strong> 45 - 60 min.</p>
+                </div>
+            </div>
         </div>
+    </div>
+<br><br><br><br><br><br>
+    <section class="about" id="about">
+
+    <h1 class="heading"> <span>sobre</span> nós </h1>
+    <br><br><br><br><br><br><br><br>
+
+    <div class="row">
+
+        <div class="image">
+            <img src="/docs/about.jpg" alt="">
+        </div>
+
+        <div class="content">
+            <h3>O que torna nossa cantina especial?</h3>
+            <p>A nossa cantina tem produtos maravilhosos, que são feitos com produtos de ótimas qualidades. Os nossos atendentes sempre serão educados e atenciosos com todos.</p>
+            <p>Temos todos os tipos de atendimento (falado, linguagem de sinais) </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+    <section class="mais-pedidos">
+        <h1 class="titulo-pedidos">Os Queridinhos do <p></p> <img src="/docs/logoPN.png"></h1>
     </section>
-    
+
     <footer>
-       <h2> By Steffany, Thamye, João Victor, Rebeca e Pedro O.!</h2>
+        <h2>By Steffany, Thamye, João Victor, Rebeca e Pedro O.!</h2>
     </footer>
 
     <script src="../scripts/Home.js"></script>

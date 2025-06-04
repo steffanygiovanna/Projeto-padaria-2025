@@ -8,6 +8,51 @@ var contenedor_login_register = document.querySelector(".contenedor__login-regis
 var caja_trasera_login = document.querySelector(".caja__trasera-login");
 var caja_trasera_register = document.querySelector(".caja__trasera-register");
 
+const formLogin = document.querySelector(".formulario__login");
+const formCadastro = document.querySelector(".formulario__register");
+
+formCadastro.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const nome = document.getElementById("cadastroNome").value;
+    const email = document.getElementById("cadastroEmail").value;
+    const senha = document.getElementById("cadastroSenha").value;
+
+    let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+    const existe = usuarios.some(usuario => usuario.email === email);
+    if (existe) {
+        alert("Esse email já está cadastrado!");
+        return;
+    }
+
+    usuarios.push({ nome, email, senha });
+    localStorage.setItem("usuarios", JSON.stringify(usuarios));
+
+    alert("Cadastro realizado com sucesso!");
+    formCadastro.reset();
+    iniciarSesion(); 
+});
+
+formLogin.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const email = document.getElementById("loginEmail").value;
+    const senha = document.getElementById("loginSenha").value;
+
+    let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+    const usuario = usuarios.find(user => user.email === email && user.senha === senha);
+
+    if (usuario) {
+        alert(`Bem-vindo(a), ${usuario.nome}!`);
+         window.location.href = "home.html"; 
+    } else {
+        alert("Email ou senha incorretos ou Cliente não cadastrado!");
+    }
+});
+
+
 function anchoPage() {
     if (window.innerWidth > 850) {
         caja_trasera_register.style.display = "block";
