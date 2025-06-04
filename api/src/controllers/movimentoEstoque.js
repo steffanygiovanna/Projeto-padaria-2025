@@ -13,8 +13,8 @@ const create = async (req, res) => {
 }
 
 const read = async (req, res) => {
-    const clientes = await prisma.cliente.findMany();
-    res.json(clientes);
+    const estoque = await prisma.estoque.findMany();
+    res.json(estoque);
 }
 
 

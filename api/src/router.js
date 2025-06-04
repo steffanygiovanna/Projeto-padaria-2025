@@ -24,11 +24,11 @@ routes.get('/pedidos/:id', Pedido.readOne);
 routes.put('/pedidos/:id', Pedido.update);
 routes.delete('/pedidos/:id', Pedido.remove);
 
-routes.post('/itens', Item.create);
-routes.get('/itens', Item.read);
-routes.get('/itens/:id', Item.readOne);
-routes.put('/itens/:id', Item.update);
-routes.delete('/itens/:id', Item.remove);
+routes.post('/item', Item.create);
+routes.get('/item', Item.read);
+routes.get('/item/:id', Item.readOne);
+routes.put('/item/:id', Item.update);
+routes.delete('/item/:id', Item.remove);
 
 routes.post('/funcionarios', Funcionario.create);
 routes.get('/funcionarios', Funcionario.read);
