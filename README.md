@@ -58,6 +58,6 @@
 ![](./docs/Gantt.png)
 
 ## Padaria (SWOT)
-![](./docs/Gantt.png)
+![](./docs/SWOT.png)
 
 
