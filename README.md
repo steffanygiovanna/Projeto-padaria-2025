@@ -20,6 +20,19 @@
 - [X] Modelar o banco de dados MER x DER Modelo conceitual
 - [x] Cadastrar os integrantes do grupo nas ferramentas de gestão de projeto escolhida Trello, Jira, Asana, etc.
 
+
+## Escopo da 3º Sprint
+### Apresentação em 18/06
+
+- [ ] Iniciar a codificação/desenvolvimento **Banco de dados**
+- [X] Iniciar a codificação/desenvolvimento **Back-end**
+- [X] UML [DC (Diagrama de Classes)](https://github.com/wellifabio/senai2024/tree/main/ds/3des/03-rms/aula03) **Back-End**
+- [X] Iniciar a codificação/desenvolvimento **Front-end**
+- [ ] UML [DA (Diagrama de Atividades)](../../02-pbe2/aula10/README.md) **Front-End**
+- [X] Iniciar a codificação/desenvolvimento **Mobile**
+- [ ] Análise de Viabilidade com Matriz SWOT
+- [ ] Triângulo da qualidade do Projeto (Escopo, Prazo e Custo)
+      
 ## Padaria (Trello)
 ![](./docs/Trello.png)
 
