@@ -18,11 +18,16 @@
 }
 
 
+
+
 header {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 5px 100vh;
+    width: 100%;
+    gap: 1px;
+    background-color: var(--c2);
+    padding: 15px 2%;
 }
 
 
