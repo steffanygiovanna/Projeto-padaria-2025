@@ -61,7 +61,7 @@
 ![](./docs/SWOT.png)
 
 ## Padaria (Triângulo de Ferro)
-![](./docs/triangulodeferro.png)
+![](./docs/Triangulo.png)
 
 
 
