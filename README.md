@@ -6,6 +6,12 @@
 - João Angra
 - Thamye Souza
 - Pedro Oliveira
+
+  ## Backlog do Projeto final
+#### Sprint inicial
+- [x] Escolher a metodologia **SCRUM, KANBAN, XP, outras**
+- [x] Definir **Papéis e responsabilidades**
+- [x] Apresentar a proposta inicial
   
 #### Sprint atual
 - [X] Modelar o negócio no **[Canvas](https://wellifabio.github.io/canvas/)**
@@ -32,7 +38,19 @@
 - [X] Iniciar a codificação/desenvolvimento **Mobile**
 - [ ] Análise de Viabilidade com Matriz SWOT
 - [ ] Triângulo da qualidade do Projeto (Escopo, Prazo e Custo)
-      
+
+## Backlog desta Sprint
+- [ ] Modelar o negócio no **[Canvas](https://wellifabio.github.io/canvas/)**
+- [ ] Criar um cronograma **[Gráfico Gant](https://wellifabio.github.io/gantt/)**
+- [ ] Criar um repositório no **github** e adicionar os integrantes do grupo como colaboradores.
+    - [ ] Enviar o link do repositório neste **[FORMS](https://docs.google.com/forms/d/e/1FAIpQLSdQFCwZJLTHT7JLSeKzwsJa9NJqV4QQ1FKrmGqT6vaZVynukw/viewform?usp=dialog)**
+- [ ] **Protótipo** funcional inicial (Com Figma - Mobile e Web))
+- [ ] Elencar os **[requisitos funcionais como neste exemplo](./requisitos.md)**. 
+    - [ ] Ilustrar cada **requisito funciional** com [DCU (Diagrama de casos de Uso)](https://github.com/wellifabio/senai2024/tree/main/ds/3des/03-rms/aula02)
+- [ ] Modelar o banco de dados MER x DER
+- [ ] Cadastrar os integrantes do grupo nas ferramentas de gestão de projeto escolhida Trello, Jira, Asana, etc.
+
+
 ## Padaria (Trello)
 ![](./docs/Trello.png)
 
