@@ -40,50 +40,21 @@
 
 ## Requisitos Funcionais
 
-### RF01 - Realizar Pedido  
-O sistema deve permitir que o **Cliente** realize um pedido, escolhendo os itens desejados.
-
-### RF02 - Verificar Estoque  
-O sistema deve permitir que **Clientes**, **Funcionários** e o **Gerente** verifiquem a disponibilidade dos itens no estoque.
-
-### RF03 - Efetuar Pagamento  
-O sistema deve permitir que o **Cliente** realize o pagamento do pedido.
-
-### RF04 - Processar Compra  
-O sistema deve processar a compra, calculando valores, validando o pagamento e registrando o pedido.
-
-### RF05 - Confirmar Pedido  
-O sistema deve permitir que o **Cliente** confirme o pedido após o processamento.
-
-### RF06 - Informar Forma de Recebimento  
-O sistema deve permitir que o **Cliente** selecione a forma de recebimento (ex.: entrega por motoboy, retirada, etc).
-
-### RF07 - Atender Cliente  
-O sistema deve permitir que o **Funcionário** atenda o cliente durante o processo de compra.
-
-### RF08 - Preparar Pedido  
-O sistema deve permitir que o **Funcionário** prepare os pedidos confirmados.
-
-### RF09 - Contatar Motoboy  
-O sistema deve permitir que o **Funcionário** entre em contato com o motoboy para realizar a entrega.
-
-### RF10 - Realizar Entrega  
-O sistema deve permitir que o **Funcionário** registre a entrega do pedido.
-
-### RF11 - Controlar Estoque  
-O sistema deve permitir que o **Gerente** faça o controle geral do estoque (incluindo atualização de quantidades, entrada de mercadorias, etc).
-
-### RF12 - Fazer Pedidos de Ingredientes  
-O sistema deve permitir que o **Gerente** faça pedidos de reposição de ingredientes.
-
-### RF13 - Registrar Fornecedores  
-O sistema deve permitir que o **Gerente** registre novos fornecedores no sistema.
-
-### RF14 - Fazer Login  
-O sistema deve permitir que o **Gerente** faça login para acessar as funções administrativas.
-
-### RF15 - Estar Cadastrado  
-O sistema deve garantir que o **Gerente** só consiga fazer login se já estiver cadastrado previamente.
+- [RF001] O sistema deve permitir que o Cliente realize pedidos, escolhendo os itens desejados.
+- [RF002] O sistema deve permitir que Clientes, Funcionários e Gerente verifiquem a disponibilidade de itens no estoque.
+- [RF003] O sistema deve permitir que o Cliente realize o pagamento do pedido.
+- [RF004] O sistema deve processar a compra, incluindo cálculo de valores, validação do pagamento e registro do pedido.
+- [RF005] O sistema deve permitir que o Cliente confirme o pedido após o processamento.
+- [RF006] O sistema deve permitir que o Cliente selecione a forma de recebimento (ex.: entrega por motoboy, retirada, etc).
+- [RF007] O sistema deve permitir que o Funcionário atenda o cliente durante o processo de compra.
+- [RF008] O sistema deve permitir que o Funcionário prepare os pedidos confirmados.
+- [RF009] O sistema deve permitir que o Funcionário entre em contato com o motoboy para realizar a entrega.
+- [RF010] O sistema deve permitir que o Funcionário registre a entrega do pedido.
+- [RF011] O sistema deve permitir que o Gerente faça o controle geral do estoque, incluindo atualização de quantidades e entrada de mercadorias.
+- [RF012] O sistema deve permitir que o Gerente faça pedidos de reposição de ingredientes.
+- [RF013] O sistema deve permitir que o Gerente registre novos fornecedores no sistema.
+- [RF014] O sistema deve permitir que o Gerente faça login para acessar as funções administrativas.
+- [RF015] O sistema deve garantir que o Gerente só consiga fazer login se estiver cadastrado previamente.
 
 ![](./docs/Diagrama%20Cantina.png)
 
