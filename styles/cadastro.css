@@ -1,92 +1,79 @@
 body {
     font-family: Arial, sans-serif;
-    /* background-color:; */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    background-color: #f8f8f8;
 }
-
-
 
 .container {
     display: flex;
-    justify-content: start;
-    align-items: start;
-    transform: translate(-100%, -0%);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
 }
 
-
-
 .login-box {
-    background-color: rgb(255, 255, 255);
+    background-color: #ffffff;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    width: 100%;
+    max-width: 400px;
 }
-
-
 
 h1 {
     font-family: 'Georgia', serif;
     margin-bottom: 10px;
+    font-size: 2rem;
 }
-
-
 
 p {
     margin-bottom: 20px;
     color: #666;
+    font-size: 1.2rem;
 }
-
-
 
 .textbox {
     margin-bottom: 15px;
+    position: relative;
 }
-
-
 
 .textbox input {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 1rem;
 }
-
-
-
-
 
 .toggle-password {
     cursor: pointer;
     position: absolute;
-    margin-left: -25px;
-    margin-top: 10px;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: #666;
 }
-
-
 
 .links {
     margin-bottom: 15px;
+    font-size: 1rem;
 }
-
-
 
 .links a {
     color: #0066cc;
     text-decoration: none;
 }
 
-
-
 .links a:hover {
     text-decoration: underline;
 }
-
-
 
 .btn {
     background-color: #313131;
@@ -96,18 +83,66 @@ p {
     border-radius: 5px;
     cursor: pointer;
     width: 100%;
+    font-size: 1rem;
 }
-
-
 
 .btn:hover {
     background-color: #6d6d6d;
 }
 
-
-
 .version-info {
     margin-top: 20px;
     font-size: 0.8em;
     color: #999;
+}
+
+/* ========== RESPONSIVO ========== */
+
+@media (max-width: 600px) {
+    body {
+        align-items: flex-start;
+        height: auto;
+        padding-top: 30px;
+    }
+
+    .login-box {
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    .links {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .login-box {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    .textbox input {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    .toggle-password {
+        font-size: 0.9rem;
+    }
 }
