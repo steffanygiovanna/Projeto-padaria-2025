@@ -79,3 +79,5 @@
 ## Padaria (Triângulo de Ferro)
 ![](./docs/Triangulo.png)
 
+## Padaria (Diagrama de Atividades)
+![](./docs/Captura%20de%20tela%202025-06-18%20084534.png)
