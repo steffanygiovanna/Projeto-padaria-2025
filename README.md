@@ -38,6 +38,9 @@
 - [x] Análise de Viabilidade com Matriz SWOT
 - [x] Triângulo da qualidade do Projeto (Escopo, Prazo e Custo)
 
+# **Mobile(figma)**
+-  [Protótipo Funcional](https://www.figma.com/proto/xoCD30ohb0krTrwOxEliXa/Prot%C3%B3tipo-Funcional?node-id=2-309&starting-point-node-id=76%3A166)
+
 ## Requisitos Funcionais
 
 - [RF001] O sistema deve permitir que o Cliente realize pedidos, escolhendo os itens desejados.
