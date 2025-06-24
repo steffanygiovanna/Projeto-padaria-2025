@@ -3,7 +3,7 @@
 :root{
     --main-color:#ffefd8;
     --black:#13131a;
-    --bg:#010103;
+    --bg:#592f16;
     --border:.1rem solid rgba(255,255,255,.3);
 }
 
@@ -66,26 +66,25 @@ header {
     justify-content: center;
     width: 100%;
     gap: 1px;
-    background-color: var(--c2);
+    background-color: var(--black);
     padding: 15px 2%;
     flex-wrap: wrap;
 }
 
 .logo img {
-    height: 67px;
-    margin-right: 20px;
+    height: 50px;
+    margin-right: 10px;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    padding: 0.5px 1px;
-    justify-content: center;
+    padding: 5px 10px;
 }
 
 nav ul li {
-    margin: 0.5vh 3vw;
+    margin: 1vh 3vw;
     position: relative;
 }
 
@@ -111,37 +110,18 @@ nav ul li:hover a::after {
     transform: scaleX(1);
 }
 
-nav ul li:hover a {
-    text-decoration: none;
-}
-
-
-.home{
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    background:url(../images/home-img.jpeg) no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
-.home .content{
-    max-width: 60rem;
-}
-
-.home .content h3{
-    font-size: 6rem;
+.heading {
+    text-align: center;
+    color: #fff;
     text-transform: uppercase;
-    color:#fff;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
 }
 
-.home .content p{
-    font-size: 2rem;
-    font-weight: lighter;
-    line-height: 1.8;
-    padding:1rem 0;
-    color:#eee;
+.heading span {
+    color: var(--main-color);
 }
+
 
 .about .row{
     display: flex;

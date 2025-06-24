@@ -21,7 +21,7 @@ body {
     align-items: center;
     justify-content: flex-start;
     font-family: sans-serif;
-    background-color: #000000;
+    background-color: #592f16;
 }
 
 header {
@@ -133,7 +133,7 @@ input {
     background: var(--black);
     flex-wrap: wrap;
     width: 100%;
-    padding: 20px;
+    padding: 10px;
 }
 
 .about .row .image {
@@ -141,13 +141,13 @@ input {
 }
 
 .about .row .image img {
-    width: 100%;
+    width: 80%;
     height: auto;
 }
 
 .about .row .content {
     flex: 1 1 300px;
-    background-color: #000000;
+    background-color: #592f16;
     padding: 20px;
 }
 
