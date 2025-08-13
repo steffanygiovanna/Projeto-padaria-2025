@@ -38,6 +38,16 @@
 - [x] Análise de Viabilidade com Matriz SWOT
 - [x] Triângulo da qualidade do Projeto (Escopo, Prazo e Custo)
 
+## Proxima Sprint (Sprint 04 - 03/09)
+Funcionalidades principais implementadas, como:
+- [ ] Back-End - CRUDs (Cadastro, Listagem, alteração e exclusão) das principais **tabelas**.
+- [ ] Back-Front - CRUDs das principais **Telas** com Responsividade.
+- [ ] Login com autenticação real (segurança JWT).
+- [ ] Integração do front com o back-end e banco de dados. 
+- [ ] Fluxo de navegação funcionando (Web e/ou Mobile).
+- [ ] Relatório de testes manuais **unitários**, **integração** e **ponto a ponto**.
+- [ ] Entregas através do repositório do projeto no GitHub, com evidências dos testes em relatório no formato PDF.
+
 # **Mobile(figma)**
 -  [Protótipo Funcional](https://www.figma.com/proto/xoCD30ohb0krTrwOxEliXa/Prot%C3%B3tipo-Funcional?node-id=2-309&starting-point-node-id=76%3A166)
 

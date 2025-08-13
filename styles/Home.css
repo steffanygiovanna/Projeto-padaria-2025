@@ -1,3 +1,4 @@
+@import url('https://fontsgoogleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 :root {
     --c1: #d9933d;
     --c2: #000000;
@@ -11,9 +12,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    font-family: var(--font-family);
 }
 
+
 body {
+    padding: 0 2%;
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -31,9 +37,72 @@ header {
     width: 100%;
     gap: 1px;
     background-color: var(--c2);
-    padding: 15px 2%;
+    padding: 1rem 0;
     flex-wrap: wrap;
 }
+
+.header--menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    color: var(--c3);
+}
+
+.burguer--icon i{
+    padding: 10px;
+    background-color: var(--c1);
+    color: var(--c3);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.search--box{
+    background: var(--c3);
+    border-radius: 10px;
+    flex: 1;
+    align-items: center;
+    padding: 0 1rem;
+}
+.search--box i{
+    color: var(--c1);
+
+}
+
+.search--box input{
+    background: var(--c3);
+    padding: 10px;
+    width: 80%;
+}
+
+.menu--icons{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.menu--icons i{
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.fa-cart-shopping{
+    background: transparent;
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+}
+
+.cart-icon{
+    position: relative;
+}
+.cart-icon span{
+    background-color: var(--c4);
+    color: var(--c3);
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+}
+
 
 .logo img {
     height: 67px;
