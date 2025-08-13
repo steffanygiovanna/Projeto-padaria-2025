@@ -1,0 +1,1037 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "API da Padaria ",
+        "version": "1.0.0",
+        "description": "Documentação da API Pedidos<br>Tecnologias: (Node + Prisma + MySQL[MariaDB])",
+        "contact": {
+            "name": "Padaria Paladar Nobre",
+            "email": "steffanygiovannasouza@gmail.com",
+            "url": "https://github.com/steffanygiovanna"
+        }
+    },
+    "servers": [
+        {
+            "url": "http://localhost:3001",
+            "description": "Servidor local"
+        }
+    ],
+    "tags": [
+        {
+            "name": "Teste geral da API",
+            "description": "Endpoint de teste da API"
+        },
+        {
+            "name": "CRUD de Cliente",
+            "description": "Endpoints de clientes"
+        },
+        {
+            "name": "CRUD de Produto",
+            "description": "Endpoints de produtos"
+        },
+        {
+            "name": "CRUD de Pedido",
+            "description": "Endpoints de pedidos"
+        },
+        {
+            "name": "CRUD de Item_pedido",
+            "description": "Endpoints de itens pedidos"
+        },
+        {
+            "name": "CRUD de Funcionario",
+            "description": "Endpoints de funcionarios"
+        },
+        {
+            "name": "CRUD de MovimentoEstoque",
+            "description": "Endpoints de estoque"
+        },
+        {
+            "name": "CRUD de Fornecedor",
+            "description": "Endpoints de fornecedor"
+        }
+    ],
+    "paths": {
+        "/": {
+            "get": {
+                "tags": [
+                    "Teste geral da API"
+                ],
+                "summary": "Endpoint de teste geral da API",
+                "responses": {
+                    "200": {
+                        "description": "Retorna o título da API"
+                    },
+                    "500": {
+                        "description": "Erro de resposta do SERVIDOR"
+                    }
+                }
+            }
+        },
+        "/api/Cliente": {
+            "get": {
+                "tags": [
+                    "CRUD de Cliente"
+                ],
+                "summary": "Endpoint para obter todos os clientes",
+                "responses": {
+                    "200": {
+                        "description": "Lista de clientes cadastrados"
+                    },
+                    "500": {
+                        "description": "Servidor não está respondendo"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "CRUD de Cliente"
+                ],
+                "summary": "Endpoint para cadastrar novo cliente",
+                "requestBody": {
+                    "description": "Dados de acesso",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "nome": {
+                                        "type": "string",
+                                        "default": "Ana Silva"
+                                    },
+                                    "email": {
+                                        "type": "string",
+                                        "default": "ana.silva@email.com"
+                                    },
+                                    "senha": {
+                                        "type": "string",
+                                        "default": "senha123"
+                                    },
+                                    "telefone": {
+                                        "type": "integer",
+                                        "default": "(11) 98765-4321"
+                                    },
+                                     "endereco": {
+                                        "type": "string",
+                                        "default": "Rua das Flores, 123, São Paulo, SP"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Novo cliente"
+                    },
+                    "400": {
+                        "description": "Erro ao cadastrar cliente, envie nome, email, senha, telefone e endereço"
+                    }
+                }
+            }
+        },
+        "/api/Cliente/{cliente_id}": {
+            "patch": {
+                "tags": [
+                    "CRUD de Cliente"
+                ],
+                "parameters": [
+                    {
+                        "name": "cliente_id",
+                        "in": "path",
+                        "required": true,
+                        "description": "Id do cliente a ser alterado",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "summary": "Endpoint para alterar dados do cliente",
+                "requestBody": {
+                    "description": "Dados de exemplo",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                               "properties": {
+                                    "nome": {
+                                        "type": "string",
+                                        "default": "Ana Silva"
+                                    },
+                                    "email": {
+                                        "type": "string",
+                                        "default": "ana.silva@email.com"
+                                    },
+                                    "senha": {
+                                        "type": "string",
+                                        "default": "senha123"
+                                    },
+                                    "telefone": {
+                                        "type": "integer",
+                                        "default": "(11) 98765-4321"
+                                    },
+                                     "endereco": {
+                                        "type": "string",
+                                        "default": "Rua das Flores, 123, São Paulo, SP"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "202": {
+                        "description": "Cliente alterado com sucesso"
+                    },
+                    "400": {
+                        "description": "Erro ao cadastrar cliente, envie nome, email, senha, telefone e endereço"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "CRUD de Cliente"
+                ],
+                "parameters": [
+                    {
+                        "name": "cliente_id",
+                        "in": "path",
+                        "required": true,
+                        "description": "Id do cliente a ser excluído",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "summary": "Endpoint para excluir um cliente",
+                "responses": {
+                    "204": {
+                        "description": "Cliente excluído com sucesso"
+                    },
+                    "500": {
+                        "description": "Não foi possível excluir cliente, verifique se o id está correto"
+                    }
+                }
+            }
+        },
+        "/api/Produto": {
+            "get": {
+                "tags": [
+                    "CRUD de Produto"
+                ],
+                "summary": "Endpoint para obter todos os produtos",
+                "responses": {
+                    "200": {
+                        "description": "Lista de produtos cadastrados"
+                    },
+                    "500": {
+                        "description": "Servidor não está respondendo"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "CRUD de Produto"
+                ],
+                "summary": "Endpoint para cadastrar novo produto",
+                "requestBody": {
+                    "description": "Dados de acesso",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "nome": {
+                                        "type": "string",
+                                        "default": "Pao Frances"
+                                    },
+                                    "preco": {
+                                        "type": "string",
+                                        "default": "0.80"
+                                    },
+                                    "descricao": {
+                                        "type": "string",
+                                        "default": "Pão francês fresquinho"
+                                    },
+                                    "qtd_estoque": {
+                                        "type": "integer",
+                                        "default": "50"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Novo produto"
+                    },
+                    "400": {
+                        "description": "Erro ao cadastrar produto, envie nome, preco, descricao e qtd_estoque"
+                    }
+                }
+            }
+        },
+        "/api/Produto/{produto_id}": {
+            "patch": {
+                "tags": [
+                    "CRUD de Produto"
+                ],
+                "parameters": [
+                    {
+                        "name": "produto_id",
+                        "in": "path",
+                        "required": true,
+                        "description": "Id do produto a ser alterado",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "summary": "Endpoint para alterar dados do produto",
+                "requestBody": {
+                    "description": "Dados de exemplo",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                               "properties": {
+                                    "nome": {
+                                        "type": "string",
+                                        "default": "Pao Frances"
+                                    },
+                                    "preco": {
+                                        "type": "string",
+                                        "default": "0.80"
+                                    },
+                                    "descricao": {
+                                        "type": "string",
+                                        "default": "Pão francês fresquinho"
+                                    },
+                                    "qtd_estoque": {
+                                        "type": "integer",
+                                        "default": "50"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "202": {
+                        "description": "Produto alterado com sucesso"
+                    },
+                    "400": {
+                        "description": "Erro ao cadastrar produto, envie nome, preco, descricao e qtd_estoque"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "CRUD de Produto"
+                ],
+                "parameters": [
+                    {
+                        "name": "produto_id",
+                        "in": "path",
+                        "required": true,
+                        "description": "Id do produto a ser excluído",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "summary": "Endpoint para excluir um produto",
+                "responses": {
+                    "204": {
+                        "description": "Produto excluído com sucesso"
+                    },
+                    "500": {
+                        "description": "Não foi possível excluir produto, verifique se o id está correto"
+                    }
+                }
+            }
+        },
+        "/api/Pedido": {
+            "get": {
+                "tags": [
+                    "CRUD de Pedido"
+                ],
+                "summary": "Endpoint para obter todos os pedidos",
+                "responses": {
+                    "200": {
+                        "description": "Lista de pedidos cadastrados"
+                    },
+                    "500": {
+                        "description": "Servidor não está respondendo"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "CRUD de Pedido"
+                ],
+                "summary": "Endpoint para cadastrar novo pedido",
+                "requestBody": {
+                    "description": "Dados de acesso",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "cliente_id": {
+                                        "type": "integer",
+                                        "default": "1"
+                                    },
+                                    "data": {
+                                        "type": "string",
+                                        "default": null
+                                    },
+                                    "subtotal": {
+                                        "type": "string",
+                                        "default": null
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Novo pedido"
+                    },
+                    "400": {
+                        "description": "Erro ao cadastrar pedido, envie cliente_id, data e subtotal"
+                    }
+                }
+            }
+        },
+        "/api/Pedido/{pedido_id}": {
+            "patch": {
+                "tags": [
+                    "CRUD de Pedido"
+                ],
+                "parameters": [
+                    {
+                        "name": "pedido_id",
+                        "in": "path",
+                        "required": true,
+                        "description": "Id do pedido a ser alterado",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "summary": "Endpoint para alterar dados do pedido",
+                "requestBody": {
+                    "description": "Dados de exemplo",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                               "properties": {
+                                    "cliente_id": {
+                                        "type": "integer",
+                                        "default": "1"
+                                    },
+                                    "data": {
+                                        "type": "string",
+                                        "default": null
+                                    },
+                                    "subtotal": {
+                                        "type": "string",
+                                        "default": null
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "202": {
+                        "description": "Pedido alterado com sucesso"
+                    },
+                    "400": {
+                        "description": "Erro ao cadastrar pedido, envie cliente_id, data e subtotal"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "CRUD de Pedido"
+                ],
+                "parameters": [
+                    {
+                        "name": "pedido_id",
+                        "in": "path",
+                        "required": true,
+                        "description": "Id do pedido a ser excluído",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "summary": "Endpoint para excluir um pedido",
+                "responses": {
+                    "204": {
+                        "description": "Pedido excluído com sucesso"
+                    },
+                    "500": {
+                        "description": "Não foi possível excluir pedido, verifique se o id está correto"
+                    }
+                }
+            }
+        },
+        "/api/Item_pedido": {
+            "get": {
+                "tags": [
+                    "CRUD de Item_pedido"
+                ],
+                "summary": "Endpoint para obter todos os itens pedidos",
+                "responses": {
+                    "200": {
+                        "description": "Lista de itens pedidos cadastrados"
+                    },
+                    "500": {
+                        "description": "Servidor não está respondendo"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "CRUD de Item_pedido"
+                ],
+                "summary": "Endpoint para cadastrar novo item pedido",
+                "requestBody": {
+                    "description": "Dados de acesso",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "pedido_id": {
+                                        "type": "integer",
+                                        "default": "1"
+                                    },
+                                     "produto_id": {
+                                        "type": "integer",
+                                        "default": "1"
+                                    },
+                                    "data_venda": {
+                                        "type": "string",
+                                        "default": null
+                                    },
+                                    "quantidade": {
+                                        "type": "integer",
+                                        "default": "1"
+                                    }, 
+                                    "preco_unitario": {
+                                        "type": "float",
+                                        "default": 10.50
+                                    }, 
+                                    "forma_pagamento": {
+                                        "type": "string",
+                                        "default": null
+                                    },
+                                    "valor_total": {
+                                        "type": "float",
+                                        "default": null
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Novo Item pedido"
+                    },
+                    "400": {
+                        "description": "Erro ao cadastrar item pedido, envie pedido_id, produto_id, data_venda, quantidade, preco_unitario, forma_pagamento e valor_total"
+                    }
+                }
+            }
+        },
+        "/api/Item_pedido/{item_id}": {
+            "patch": {
+                "tags": [
+                    "CRUD de Item_pedido"
+                ],
+                "parameters": [
+                    {
+                        "name": "item_id",
+                        "in": "path",
+                        "required": true,
+                        "description": "Id do item pedido a ser alterado",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "summary": "Endpoint para alterar dados do item pedido",
+                "requestBody": {
+                    "description": "Dados de exemplo",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                               "properties": {
+                                    "pedido_id": {
+                                        "type": "integer",
+                                        "default": "1"
+                                    },
+                                     "produto_id": {
+                                        "type": "integer",
+                                        "default": "1"
+                                    },
+                                    "data_venda": {
+                                        "type": "string",
+                                        "default": null
+                                    },
+                                    "quantidade": {
+                                        "type": "integer",
+                                        "default": "1"
+                                    }, 
+                                    "preco_unitario": {
+                                        "type": "float",
+                                        "default": 10.50
+                                    }, 
+                                    "forma_pagamento": {
+                                        "type": "string",
+                                        "default": null
+                                    },
+                                    "valor_total": {
+                                        "type": "float",
+                                        "default": null
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "202": {
+                        "description": "Item pedido alterado com sucesso"
+                    },
+                    "400": {
+                        "description": "Erro ao cadastrar item pedido, envie pedido_id, produto_id, data_venda, quantidade, preco_unitario, forma_pagamento e valor_total"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "CRUD de Item_pedido"
+                ],
+                "parameters": [
+                    {
+                        "name": "item_id",
+                        "in": "path",
+                        "required": true,
+                        "description": "Id do item pedido a ser excluído",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "summary": "Endpoint para excluir um item pedido",
+                "responses": {
+                    "204": {
+                        "description": "Item pedido excluído com sucesso"
+                    },
+                    "500": {
+                        "description": "Não foi possível excluir item pedido, verifique se o id está correto"
+                    }
+                }
+            }
+        },
+         "/api/Funcionario": {
+            "get": {
+                "tags": [
+                    "CRUD de Funcionario"
+                ],
+                "summary": "Endpoint para obter todos os funcionarios",
+                "responses": {
+                    "200": {
+                        "description": "Lista de funcionarios cadastrados"
+                    },
+                    "500": {
+                        "description": "Servidor não está respondendo"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "CRUD de Funcionario"
+                ],
+                "summary": "Endpoint para cadastrar novo funcionario",
+                "requestBody": {
+                    "description": "Dados de acesso",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "nome": {
+                                        "type": "string",
+                                        "default": "João da Silva"
+                                    },
+                                     "cargo": {
+                                        "type": "string",
+                                        "default": "Gerente"
+                                    },
+                                    "telefone": {
+                                        "type": "string",
+                                        "default": "(11) 91234-5678"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Novo funcionario"
+                    },
+                    "400": {
+                        "description": "Erro ao cadastrar funcionario, envie nome, cargo e telefone"
+                    }
+                }
+            }
+        },
+        "/api/Funcionario/{funcionario_id}": {
+            "patch": {
+                "tags": [
+                    "CRUD de Funcionario"
+                ],
+                "parameters": [
+                    {
+                        "name": "funcionario_id",
+                        "in": "path",
+                        "required": true,
+                        "description": "Id do funcionario a ser alterado",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "summary": "Endpoint para alterar dados do funcionario",
+                "requestBody": {
+                    "description": "Dados de exemplo",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                               "properties": {
+                                    "nome": {
+                                        "type": "string",
+                                        "default": "João da Silva"
+                                    },
+                                     "cargo": {
+                                        "type": "string",
+                                        "default": "Gerente"
+                                    },
+                                    "telefone": {
+                                        "type": "string",
+                                        "default": "(11) 91234-5678"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "202": {
+                        "description": "Funcionario alterado com sucesso"
+                    },
+                    "400": {
+                        "description": "Erro ao cadastrar funcionario, envie nome, cargo e telefone"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "CRUD de Funcionario"
+                ],
+                "parameters": [
+                    {
+                        "name": "funcionario_id",
+                        "in": "path",
+                        "required": true,
+                        "description": "Id do funcionario a ser excluído",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "summary": "Endpoint para excluir um funcionario",
+                "responses": {
+                    "204": {
+                        "description": "Funcionario excluído com sucesso"
+                    },
+                    "500": {
+                        "description": "Não foi possível excluir funcionario, verifique se o id está correto"
+                    }
+                }
+            }
+        },
+         "/api/MovimentoEstoque": {
+            "get": {
+                "tags": [
+                    "CRUD de MovimentoEstoque"
+                ],
+                "summary": "Endpoint para obter todos os movimentos de estoque",
+                "responses": {
+                    "200": {
+                        "description": "Lista de movimentos do estoque cadastrados"
+                    },
+                    "500": {
+                        "description": "Servidor não está respondendo"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "CRUD de MovimentoEstoque"
+                ],
+                "summary": "Endpoint para cadastrar novo Movimento de Estoque",
+                "requestBody": {
+                    "description": "Dados de acesso",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "produto_id": {
+                                        "type": "integer",
+                                        "default": "1"
+                                    },
+                                     "tipo": {
+                                        "type": "string",
+                                        "default": "Entrada"
+                                    },
+                                    "quantidade": {
+                                        "type": "string",
+                                        "default": "25"
+                                    },
+                                    "data_movimento": {
+                                        "type": "string",
+                                        "default": null
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Novo Movimento de Estoque cadastrado"
+                    },
+                    "400": {
+                        "description": "Erro ao cadastrar um novo movimento de estoque, envie produto_id, tipo, quantidade e data_movimento"
+                    }
+                }
+            }
+        },
+        "/api/MovimentoEstoque/{estoque_id}": {
+            "patch": {
+                "tags": [
+                    "CRUD de MovimentoEstoque"
+                ],
+                "parameters": [
+                    {
+                        "name": "estoque_id",
+                        "in": "path",
+                        "required": true,
+                        "description": "Id do estoque a ser alterado",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "summary": "Endpoint para alterar dados do estoque",
+                "requestBody": {
+                    "description": "Dados de exemplo",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "produto_id": {
+                                        "type": "integer",
+                                        "default": "1"
+                                    },
+                                     "tipo": {
+                                        "type": "string",
+                                        "default": "Entrada"
+                                    },
+                                    "quantidade": {
+                                        "type": "string",
+                                        "default": "25"
+                                    },
+                                    "data_movimento": {
+                                        "type": "string",
+                                        "default": null
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "202": {
+                        "description": "Movimento de Estoque alterado com sucesso"
+                    },
+                    "400": {
+                        "description": "Erro ao alterar o movimento do estoque, envie produto_id, tipo, quantidade e data_movimento"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "CRUD de MovimentoEstoque"
+                ],
+                "parameters": [
+                    {
+                        "name": "estoque_id",
+                        "in": "path",
+                        "required": true,
+                        "description": "Id do estoque a ser excluído",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "summary": "Endpoint para excluir um movimento de estoque",
+                "responses": {
+                    "204": {
+                        "description": "Movimento de Estoque excluído com sucesso"
+                    },
+                    "500": {
+                        "description": "Não foi possível excluir Um movimento de estoque, verifique se o id está correto"
+                    }
+                }
+            }
+        },
+         "/api/Fornecedor": {
+            "get": {
+                "tags": [
+                    "CRUD de Fornecedor"
+                ],
+                "summary": "Endpoint para obter todos os fornecedores",
+                "responses": {
+                    "200": {
+                        "description": "Lista de fornecedores cadastrados"
+                    },
+                    "500": {
+                        "description": "Servidor não está respondendo"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "CRUD de Fornecedor"
+                ],
+                "summary": "Endpoint para cadastrar novo fornecedor",
+                "requestBody": {
+                    "description": "Dados de acesso",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "nome": {
+                                        "type": "string",
+                                        "default": "Albano Embalagens"
+                                    },
+                                     "telefone": {
+                                        "type": "string",
+                                        "default": "(11) 91234-5678"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Novo fornecedor cadastrado"
+                    },
+                    "400": {
+                        "description": "Erro ao cadastrar um novo fornecedor, envie nome e telefone"
+                    }
+                }
+            }
+        },
+        "/api/Fornecedor/{fornecedor_id}": {
+            "patch": {
+                "tags": [
+                    "CRUD de Fornecedor"
+                ],
+                "parameters": [
+                    {
+                        "name": "fornecedor_id",
+                        "in": "path",
+                        "required": true,
+                        "description": "Id do fornecedor a ser alterado",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "summary": "Endpoint para alterar dados do fornecedor",
+                "requestBody": {
+                    "description": "Dados de exemplo",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                               "properties": {
+                                    "nome": {
+                                        "type": "string",
+                                        "default": "Albano Embalagens"
+                                    },
+                                     "telefone": {
+                                        "type": "string",
+                                        "default": "(11) 91234-5678"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "202": {
+                        "description": "Fornecedor alterado com sucesso"
+                    },
+                    "400": {
+                        "description": "Erro ao alterar o fornecedor, envie nome e telefone"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "CRUD de Fornecedor"
+                ],
+                "parameters": [
+                    {
+                        "name": "fornecedor_id",
+                        "in": "path",
+                        "required": true,
+                        "description": "Id do fornecedor a ser excluído",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "summary": "Endpoint para excluir um fornecedor",
+                "responses": {
+                    "204": {
+                        "description": "Fornecedor excluído com sucesso"
+                    },
+                    "500": {
+                        "description": "Não foi possível excluir um fornecedor, verifique se o id está correto"
+                    }
+                }
+            }
+        }
+    }
+}

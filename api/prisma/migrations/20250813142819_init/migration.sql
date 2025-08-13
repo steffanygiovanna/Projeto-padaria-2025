@@ -1,18 +1,21 @@
 -- CreateTable
 CREATE TABLE `Cliente` (
     `cliente_id` INTEGER NOT NULL AUTO_INCREMENT,
-    `nome` VARCHAR(100) NOT NULL,
+    `nome` VARCHAR(191) NOT NULL,
+    `email` VARCHAR(191) NOT NULL,
+    `senha` VARCHAR(191) NOT NULL,
     `telefone` INTEGER NOT NULL,
     `endereco` VARCHAR(100) NULL,
 
+    UNIQUE INDEX `Cliente_email_key`(`email`),
     PRIMARY KEY (`cliente_id`)
-) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci; 
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 -- CreateTable
 CREATE TABLE `Produto` (
     `produto_id` INTEGER NOT NULL AUTO_INCREMENT,
-    `nome` VARCHAR(100) NOT NULL,
-    `preco` DECIMAL(10, 2) NOT NULL,
+    `nome` VARCHAR(191) NOT NULL,
+    `preco` DOUBLE NOT NULL,
     `descricao` VARCHAR(255) NOT NULL,
     `qtd_estoque` INTEGER NOT NULL,
 
@@ -24,7 +27,7 @@ CREATE TABLE `Pedido` (
     `pedido_id` INTEGER NOT NULL AUTO_INCREMENT,
     `cliente_id` INTEGER NOT NULL,
     `data` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
-    `sub_total` DECIMAL(10, 2) NOT NULL,
+    `sub_total` DECIMAL(65, 30) NULL,
 
     PRIMARY KEY (`pedido_id`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
@@ -36,9 +39,9 @@ CREATE TABLE `Item_Pedido` (
     `produto_id` INTEGER NOT NULL,
     `data_venda` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
     `quantidade` INTEGER NOT NULL,
-    `preco_unitario` DECIMAL(10, 2) NOT NULL DEFAULT 0,
-    `forma_pagamento` VARCHAR(100) NOT NULL,
-    `valor_total` DECIMAL(10, 2) NOT NULL DEFAULT 0,
+    `preco_unitario` DOUBLE NOT NULL,
+    `forma_pagamento` VARCHAR(191) NULL,
+    `valor_total` DOUBLE NULL,
 
     PRIMARY KEY (`item_id`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
@@ -46,9 +49,9 @@ CREATE TABLE `Item_Pedido` (
 -- CreateTable
 CREATE TABLE `Funcionario` (
     `funcionario_id` INTEGER NOT NULL AUTO_INCREMENT,
-    `nome` VARCHAR(100) NOT NULL,
-    `cargo` VARCHAR(100) NOT NULL,
-    `telefone` VARCHAR(255) NOT NULL,
+    `nome` VARCHAR(191) NOT NULL,
+    `cargo` VARCHAR(191) NOT NULL,
+    `telefone` VARCHAR(191) NOT NULL,
 
     PRIMARY KEY (`funcionario_id`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
@@ -57,7 +60,7 @@ CREATE TABLE `Funcionario` (
 CREATE TABLE `MovimentoEstoque` (
     `estoque_id` INTEGER NOT NULL AUTO_INCREMENT,
     `produto_id` INTEGER NOT NULL,
-    `tipo` VARCHAR(20) NOT NULL,
+    `tipo` ENUM('Entrada', 'Saida') NOT NULL,
     `quantidade` INTEGER NOT NULL,
     `data_movimento` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
 
@@ -67,8 +70,8 @@ CREATE TABLE `MovimentoEstoque` (
 -- CreateTable
 CREATE TABLE `Fornecedor` (
     `fornecedor_id` INTEGER NOT NULL AUTO_INCREMENT,
-    `nome` VARCHAR(100) NOT NULL,
-    `telefone` VARCHAR(20) NOT NULL,
+    `nome` VARCHAR(191) NOT NULL,
+    `telefone` VARCHAR(191) NOT NULL,
 
     PRIMARY KEY (`fornecedor_id`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
