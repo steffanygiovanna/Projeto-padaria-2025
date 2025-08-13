@@ -5,6 +5,13 @@
     --black: #13131a;
     --bg: #592f16;
     --border: .1rem solid rgba(255, 255, 255, .3);
+
+        --c1: #d9933d;
+    --c2: #000000;
+    --c3: #faebd7;
+    --c4: #d9933d;
+    --t1: rgba(0, 0, 0, 0.7);
+    --t2: rgba(255, 255, 255, 0.7);
 }
 
 * {
@@ -17,6 +24,71 @@
     text-decoration: none;
     text-transform: capitalize;
     transition: .2s linear;
+}
+body{
+    padding: 0 9%;
+}
+
+.header--menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    color: var(--c3);
+}
+
+.burguer--icon i{
+    padding: 10px;
+    background-color: var(--c1);
+    color: var(--c3);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.search--box{
+    background: var(--c3);
+    border-radius: 10px;
+    flex: 1;
+    align-items: center;
+    padding: 0 1rem;
+}
+.search--box i{
+    color: var(--c1);
+
+}
+
+.search--box input{
+    background: var(--c3);
+    padding: 10px;
+    width: 80%;
+}
+
+.menu--icons{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.menu--icons i{
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.fa-cart-shopping{
+    background: transparent;
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+}
+
+.cart-icon{
+    position: relative;
+}
+.cart-icon span{
+    background-color: var(--c4);
+    color: var(--c3);
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
 }
 
 html {
@@ -174,6 +246,77 @@ nav ul li:hover a::after {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.sidebar{
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    background-color: whitesmoke;
+    box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+    padding: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.sidebar.open{
+    right: 0;
+}
+.sideabar-close{
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.cart-items{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 1rem;
+}
+.cart-items{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 5px;
+    border-radius: 5px;
+    color: black;
+    border: 1px solid powderblue;
+}
+.cart-items-price{
+    color: var(--c1);
+}
+
+.sidebar--footer{
+    position: absolute;
+    bottom: 10px;
+    width: 88%;
+}
+
+.total--amount{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid powderblue;
+    border-radius: 5px;
+    padding: 15px 10px;
+}
+.cart-total{
+    font-size: 16px;
+    color: var(--main-color);
+    font-weight: 500;
+}
+.checkout-btn{
+    width: 100%;
+    margin-top: 2rem;
+    background: green;
+    color: greenyellow;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
 }
 
 /* ============ RESPONSIVIDADE ============ */
