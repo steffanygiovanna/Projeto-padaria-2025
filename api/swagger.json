@@ -16,6 +16,27 @@
             "description": "Servidor local"
         }
     ],
+    "securityDefinitions": {
+        "bearerAuth": {
+            "type": "apiKey",
+            "name": "Authorization",
+            "in": "header",
+            "description": "Bearer token para autenticação",
+            "scheme": "bearer",
+            "bearer format": "JWT",
+            "bearer token": "JWT <token>",
+            "bearer token description": "Bearer token para autenticação"
+        }
+    },
+    "components": {
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "scheme": "bearer",
+                "bearer format": "JWT"
+            }
+        }
+    },
     "tags": [
         {
             "name": "Teste geral da API",
