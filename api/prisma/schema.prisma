@@ -12,7 +12,7 @@ model Cliente {
   nome       String
   email      String   @unique
   senha      String
-  telefone   Int
+  telefone   String
   endereco   String?  @db.VarChar(100)
   pedidos    Pedido[]
 }

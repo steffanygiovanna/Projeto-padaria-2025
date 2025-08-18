@@ -1,14 +1,15 @@
 const express = require('express');
 const routes = express.Router();
 
+const Login = require('./controllers/login');
 const Cliente = require('./controllers/cliente');
 const Pedido = require('./controllers/pedido');
 const Item = require('./controllers/itemPedido');
 const Funcionario = require('./controllers/funcionario');
 const Estoque = require('./controllers/movimentoEstoque');
 const Produto = require('./controllers/produto');
+const Fornecedor = require('./controllers/fornecedor');
 const MiddlewareAuth = require('./middlewares/auth');
-const Login = require('./controllers/login');
 
 routes.get('/', (req, res) => {
   return res.json({ titulo: 'Padaria Paladar Nobre' });
@@ -24,35 +25,41 @@ routes.post('/api/clientes', Cliente.create);
 routes.put('/api/clientes/:id', MiddlewareAuth.validate, Cliente.update);
 routes.delete('/api/clientes/:id', MiddlewareAuth.validate, Cliente.remove);
 
-routes.post('/api/pedidos', MiddlewareAuth.validate, Pedido.create);
+routes.get('/api/produtos', Produto.read);
+routes.post('/api/produtos', MiddlewareAuth.validate, Produto.create);
+routes.put('/api/produtos/:id', MiddlewareAuth.validate, Produto.update);
+routes.delete('/api/produtos/:id', MiddlewareAuth.validate, Produto.remove);
+
 routes.get('/api/pedidos', MiddlewareAuth.validate, Pedido.read);
 routes.get('/api/pedidos/:id', MiddlewareAuth.validate, Pedido.readOne);
+routes.post('/api/pedidos', MiddlewareAuth.validate, Pedido.create);
 routes.put('/api/pedidos/:id', MiddlewareAuth.validate, Pedido.update);
 routes.delete('/api/pedidos/:id', MiddlewareAuth.validate, Pedido.remove);
 
-routes.post('/api/item', MiddlewareAuth.validate, Item.create);
 routes.get('/api/item', MiddlewareAuth.validate, Item.read);
 routes.get('/api/item/:id', MiddlewareAuth.validate, Item.readOne);
+routes.post('/api/item', MiddlewareAuth.validate, Item.create);
 routes.put('/api/item/:id', MiddlewareAuth.validate, Item.update);
 routes.delete('/api/item/:id', MiddlewareAuth.validate, Item.remove);
 
-routes.post('/api/funcionarios', MiddlewareAuth.validate, Funcionario.create);
 routes.get('/api/funcionarios', MiddlewareAuth.validate, Funcionario.read);
 routes.get('/api/funcionarios/:id', MiddlewareAuth.validate, Funcionario.readOne);
+routes.post('/api/funcionarios', MiddlewareAuth.validate, Funcionario.create);
 routes.put('/api/funcionarios/:id', MiddlewareAuth.validate, Funcionario.update);
 routes.delete('/api/funcionarios/:id', MiddlewareAuth.validate, Funcionario.remove);
 
-routes.post('/api/estoque', MiddlewareAuth.validate, Estoque.create);
 routes.get('/api/estoque', MiddlewareAuth.validate, Estoque.read);
 routes.get('/api/estoque/:id', MiddlewareAuth.validate, Estoque.readOne);
+routes.post('/api/estoque', MiddlewareAuth.validate, Estoque.create);
 routes.put('/api/estoque/:id', MiddlewareAuth.validate, Estoque.update);
 routes.delete('/api/estoque/:id', MiddlewareAuth.validate, Estoque.remove);
 
-routes.post('/api/produtos', MiddlewareAuth.validate, Produto.create);
-routes.get('/api/produtos', Produto.read);
-routes.get('/api/produtos/:id', MiddlewareAuth.validate, Produto.readOne);
-routes.put('/api/produtos/:id', MiddlewareAuth.validate, Produto.update);
-routes.delete('/api/produtos/:id', MiddlewareAuth.validate, Produto.remove);
+routes.get('/api/fornecedores', MiddlewareAuth.validate, Fornecedor.read);
+routes.get('/api/fornecedores/:id', MiddlewareAuth.validate, Fornecedor.readOne);
+routes.post('/api/fornecedores', MiddlewareAuth.validate, Fornecedor.create);
+routes.put('/api/fornecedores/:id', MiddlewareAuth.validate, Fornecedor.update);
+routes.delete('/api/fornecedores/:id', MiddlewareAuth.validate, Fornecedor.remove);
+
 
 
 module.exports = routes;

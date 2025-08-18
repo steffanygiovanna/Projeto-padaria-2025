@@ -1,19 +1,22 @@
 const jsonwebtoken = require("jsonwebtoken");
 const bcrypt = require('bcrypt');
 
+// Middleware para validar token JWT dos clientes
 const validate = (req, res, next) => {
     const token = req.headers.authorization?.split(" ")[1];
-    if (!token) return res.status(401).send({ message: "Acesso negado. Nenhum token recebido." }).end();
+    if (!token) 
+        return res.status(401).send({ message: "Acesso negado. Nenhum token recebido." }).end();
+
     try {
         const payload = jsonwebtoken.verify(token, process.env.SECRET_JWT);
-        req.headers['user'] = payload;
+        req.headers['cliente'] = payload; // Armazena o payload do cliente
         next();
     } catch (err) {
-        res.status(500).send({ message: "Token inválido ou expirado." }).end();
+        res.status(403).send({ message: "Token inválido ou expirado." }).end();
     }
 }
 
-//Criar um hash da senha Usado na criação de usuário e no login
+// Criar hash da senha do cliente (usado na criação de cliente e no login)
 const createHash = async (senha) => {
     if (!senha) return null;
     try {
@@ -21,18 +24,18 @@ const createHash = async (senha) => {
         const hash = await bcrypt.hash(senha, salt);
         return hash;
     } catch (error) {
-        console.error('Erro ao criar hash:', error);
+        console.error('Erro ao criar hash da senha do cliente:', error);
         throw new Error('Erro ao criar hash');
     }
 }
 
-//Validar a senha do usuário Usado no login
+// Validar a senha do cliente (usado no login)
 const validatePassword = async (senha, hash) => {
     if (!senha || !hash) return false;
     try {
         return await bcrypt.compare(senha, hash);
     } catch (error) {
-        console.error('Erro ao validar senha:', error);
+        console.error('Erro ao validar senha do cliente:', error);
         throw new Error('Erro ao validar senha');
     }
 }

@@ -16,24 +16,12 @@
             "description": "Servidor local"
         }
     ],
-    "securityDefinitions": {
-        "bearerAuth": {
-            "type": "apiKey",
-            "name": "Authorization",
-            "in": "header",
-            "description": "Bearer token para autenticação",
-            "scheme": "bearer",
-            "bearer format": "JWT",
-            "bearer token": "JWT <token>",
-            "bearer token description": "Bearer token para autenticação"
-        }
-    },
     "components": {
         "securitySchemes": {
             "bearerAuth": {
                 "type": "http",
                 "scheme": "bearer",
-                "bearer format": "JWT"
+                "bearerFormat": "JWT"
             }
         }
     },
@@ -41,6 +29,10 @@
         {
             "name": "Teste geral da API",
             "description": "Endpoint de teste da API"
+        },
+        {
+            "name": "Rotas de Login",
+            "description": "Endpoints de clientes"
         },
         {
             "name": "CRUD de Cliente",
@@ -87,11 +79,76 @@
                     }
                 }
             }
+        
         },
-        "/api/Cliente": {
+        "/api/login": {
+            "get": {
+                "tags": [
+                    "Rotas de Login"
+                ],
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "summary": "Endpoint para validar o login",
+                "responses": {
+                    "200": {
+                        "description": "Login realizado com sucesso"
+                    },
+                    "401": {
+                        "description": "Token inválido ou expirado"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Rotas de Login"
+                ],
+                "summary": "Endpoint para fazer o login",
+                "requestBody": {
+                    "description": "Dados de login",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "email": {
+                                        "type": "string",
+                                        "default": "ana.silva@email.com"
+                                    },
+                                    "senha": {
+                                        "type": "string",
+                                        "default": "senha123"
+                                    },
+                                    "validade": {
+                                        "type": "integer",
+                                        "default": 60
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Login realizado com sucesso"
+                    },
+                    "400": {
+                        "description": "Erro ao fazer login, verifique e-mail e senha"
+                    }
+                }
+            }
+        },
+        "/api/clientes": {
             "get": {
                 "tags": [
                     "CRUD de Cliente"
+                ],
+                  "security": [
+                    {
+                        "bearerAuth": []
+                    }
                 ],
                 "summary": "Endpoint para obter todos os clientes",
                 "responses": {
@@ -150,8 +207,13 @@
                 }
             }
         },
-        "/api/Cliente/{cliente_id}": {
+        "/api/clientes/{cliente_id}": {
             "patch": {
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
                 "tags": [
                     "CRUD de Cliente"
                 ],
@@ -209,6 +271,11 @@
                 }
             },
             "delete": {
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
                 "tags": [
                     "CRUD de Cliente"
                 ],
@@ -234,7 +301,7 @@
                 }
             }
         },
-        "/api/Produto": {
+        "/api/produtos": {
             "get": {
                 "tags": [
                     "CRUD de Produto"
@@ -250,6 +317,11 @@
                 }
             },
             "post": {
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
                 "tags": [
                     "CRUD de Produto"
                 ],
@@ -292,8 +364,13 @@
                 }
             }
         },
-        "/api/Produto/{produto_id}": {
+        "/api/produtos/{produto_id}": {
             "patch": {
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
                 "tags": [
                     "CRUD de Produto"
                 ],
@@ -347,6 +424,11 @@
                 }
             },
             "delete": {
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
                 "tags": [
                     "CRUD de Produto"
                 ],
@@ -372,8 +454,13 @@
                 }
             }
         },
-        "/api/Pedido": {
+        "/api/pedidos": {
             "get": {
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
                 "tags": [
                     "CRUD de Pedido"
                 ],
@@ -388,6 +475,11 @@
                 }
             },
             "post": {
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
                 "tags": [
                     "CRUD de Pedido"
                 ],
@@ -426,8 +518,13 @@
                 }
             }
         },
-        "/api/Pedido/{pedido_id}": {
+        "/api/pedidos/{pedido_id}": {
             "patch": {
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
                 "tags": [
                     "CRUD de Pedido"
                 ],
@@ -477,6 +574,11 @@
                 }
             },
             "delete": {
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
                 "tags": [
                     "CRUD de Pedido"
                 ],
@@ -502,8 +604,13 @@
                 }
             }
         },
-        "/api/Item_pedido": {
+        "/api/item": {
             "get": {
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
                 "tags": [
                     "CRUD de Item_pedido"
                 ],
@@ -518,6 +625,11 @@
                 }
             },
             "post": {
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
                 "tags": [
                     "CRUD de Item_pedido"
                 ],
@@ -572,8 +684,13 @@
                 }
             }
         },
-        "/api/Item_pedido/{item_id}": {
+        "/api/item/{item_id}": {
             "patch": {
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
                 "tags": [
                     "CRUD de Item_pedido"
                 ],
@@ -639,6 +756,11 @@
                 }
             },
             "delete": {
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
                 "tags": [
                     "CRUD de Item_pedido"
                 ],
@@ -664,8 +786,13 @@
                 }
             }
         },
-         "/api/Funcionario": {
+         "/api/funcionarios": {
             "get": {
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
                 "tags": [
                     "CRUD de Funcionario"
                 ],
@@ -680,6 +807,11 @@
                 }
             },
             "post": {
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
                 "tags": [
                     "CRUD de Funcionario"
                 ],
@@ -718,8 +850,13 @@
                 }
             }
         },
-        "/api/Funcionario/{funcionario_id}": {
+        "/api/funcionarios/{funcionario_id}": {
             "patch": {
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
                 "tags": [
                     "CRUD de Funcionario"
                 ],
@@ -769,6 +906,11 @@
                 }
             },
             "delete": {
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
                 "tags": [
                     "CRUD de Funcionario"
                 ],
@@ -794,8 +936,13 @@
                 }
             }
         },
-         "/api/MovimentoEstoque": {
+         "/api/estoque": {
             "get": {
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
                 "tags": [
                     "CRUD de MovimentoEstoque"
                 ],
@@ -810,6 +957,11 @@
                 }
             },
             "post": {
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
                 "tags": [
                     "CRUD de MovimentoEstoque"
                 ],
@@ -852,8 +1004,13 @@
                 }
             }
         },
-        "/api/MovimentoEstoque/{estoque_id}": {
+        "/api/estoque/{estoque_id}": {
             "patch": {
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
                 "tags": [
                     "CRUD de MovimentoEstoque"
                 ],
@@ -899,14 +1056,19 @@
                 },
                 "responses": {
                     "202": {
-                        "description": "Movimento de Estoque alterado com sucesso"
+                        "description": "Estoque alterado com sucesso"
                     },
                     "400": {
-                        "description": "Erro ao alterar o movimento do estoque, envie produto_id, tipo, quantidade e data_movimento"
+                        "description": "Erro ao alterar o estoque, envie produto_id, tipo, quantidade e data_movimento"
                     }
                 }
             },
             "delete": {
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
                 "tags": [
                     "CRUD de MovimentoEstoque"
                 ],
@@ -924,16 +1086,21 @@
                 "summary": "Endpoint para excluir um movimento de estoque",
                 "responses": {
                     "204": {
-                        "description": "Movimento de Estoque excluído com sucesso"
+                        "description": "Movimento de estoque excluído com sucesso"
                     },
                     "500": {
-                        "description": "Não foi possível excluir Um movimento de estoque, verifique se o id está correto"
+                        "description": "Não foi possível excluir movimento de estoque, verifique se o id está correto"
                     }
                 }
             }
         },
-         "/api/Fornecedor": {
+        "/api/fornecedores": {
             "get": {
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
                 "tags": [
                     "CRUD de Fornecedor"
                 ],
@@ -948,6 +1115,11 @@
                 }
             },
             "post": {
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
                 "tags": [
                     "CRUD de Fornecedor"
                 ],
@@ -974,16 +1146,21 @@
                 },
                 "responses": {
                     "201": {
-                        "description": "Novo fornecedor cadastrado"
+                        "description": "Novo fornecedor"
                     },
                     "400": {
-                        "description": "Erro ao cadastrar um novo fornecedor, envie nome e telefone"
+                        "description": "Erro ao cadastrar fornecedor, envie nome e telefone"
                     }
                 }
             }
         },
-        "/api/Fornecedor/{fornecedor_id}": {
+        "/api/fornecedores/{fornecedor_id}": {
             "patch": {
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
                 "tags": [
                     "CRUD de Fornecedor"
                 ],
@@ -1029,6 +1206,11 @@
                 }
             },
             "delete": {
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
                 "tags": [
                     "CRUD de Fornecedor"
                 ],
@@ -1056,3 +1238,4 @@
         }
     }
 }
+
