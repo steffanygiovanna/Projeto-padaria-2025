@@ -30,6 +30,15 @@ body {
     background-color: #592f16;
 }
 
+.menu--icons img {
+    width: 25px; /* Controlando o tamanho do ícone do carrinho */
+    height: auto; /* Mantendo a proporção */
+}
+
+.menu--icons {
+    margin-left: auto; /* Move o carrinho para a direita */
+}
+
 header {
     display: flex;
     align-items: center;
