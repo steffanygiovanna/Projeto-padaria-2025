@@ -185,7 +185,7 @@
                                         "default": "senha123"
                                     },
                                     "telefone": {
-                                        "type": "integer",
+                                        "type": "string",
                                         "default": "(11) 98765-4321"
                                     },
                                      "endereco": {
