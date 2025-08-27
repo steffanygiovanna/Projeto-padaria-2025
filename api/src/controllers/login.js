@@ -16,6 +16,8 @@ const login = async (req, res) => {
             return res.status(401).json({ message: 'E-mail ou Senha incorretos!' });
         }
 
+        
+
         // Valida a senha
         const isValidPassword = await Middlewares.validatePassword(senha, cliente.senha);
         if (!isValidPassword) {
