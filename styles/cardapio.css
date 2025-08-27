@@ -26,15 +26,20 @@
     transition: .2s linear;
 }
 body{
-    padding: 0 9%;
+    padding: 0 10%;
 }
 
-.header--menu{
+.header--menu {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    gap: 20px;
+    justify-content: space-between;
     color: var(--c3);
+    width: 100%;
+    gap: 10px;
+}
+
+.menu--icons {
+    margin-left: auto; /* Move o carrinho para a direita */
 }
 
 .burguer--icon i{
@@ -122,8 +127,17 @@ header {
     width: 100%;
     gap: 1px;
     background-color: var(--black);
-    padding: 15px 2%;
+    padding: 10px 2%; /* Reduzido para 10px */
     flex-wrap: wrap;
+}
+
+.menu--icons img {
+    width: 25px; /* Controlando o tamanho do ícone do carrinho */
+    height: auto; /* Mantendo a proporção */
+}
+
+body {
+    padding: 0; /* Removido padding lateral completamente */
 }
 
 .logo img {
