@@ -40,7 +40,7 @@
 
 ## Proxima Sprint (Sprint 04 - 03/09)
 Funcionalidades principais implementadas, como:
-- [ ] Back-End - CRUDs (Cadastro, Listagem, alteração e exclusão) das principais **tabelas**.
+- [x] Back-End - CRUDs (Cadastro, Listagem, alteração e exclusão) das principais **tabelas**.
 - [ ] Back-Front - CRUDs das principais **Telas** com Responsividade.
 - [ ] Login com autenticação real (segurança JWT).
 - [ ] Integração do front com o back-end e banco de dados. 
