@@ -1,4 +1,5 @@
-@import url('https://fontsgoogleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
 :root {
     --c1: #d9933d;
     --c2: #000000;
@@ -17,9 +18,8 @@
     font-family: var(--font-family);
 }
 
-
 body {
-    padding: 0%;
+    padding: 0;
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -50,68 +50,72 @@ header {
     flex-wrap: wrap;
 }
 
-.header--menu{
+.header--menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
     color: var(--c3);
+    padding: 10px 2%; /* Ajuste de padding */
+    background-color: var(--c2); /* Cor de fundo do header */
 }
 
-.burguer--icon i{
+.burguer--icon i {
     padding: 10px;
     background-color: var(--c1);
     color: var(--c3);
     border-radius: 5px;
     cursor: pointer;
 }
-.search--box{
+
+.search--box {
     background: var(--c3);
     border-radius: 10px;
     flex: 1;
     align-items: center;
     padding: 0 1rem;
 }
-.search--box i{
-    color: var(--c1);
 
+.search--box i {
+    color: var(--c1);
 }
 
-.search--box input{
+.search--box input {
     background: var(--c3);
     padding: 10px;
     width: 80%;
 }
 
-.menu--icons{
+.menu--icons {
     display: flex;
     align-items: center;
     gap: 10px;
 }
-.menu--icons i{
+
+.menu--icons i {
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
 }
 
-.fa-cart-shopping{
+.fa-cart-shopping {
     background: transparent;
     width: 30px;
     height: 30px;
     border-radius: 4px;
 }
 
-.cart-icon{
+.cart-icon {
     position: relative;
 }
-.cart-icon span{
+
+.cart-icon span {
     background-color: var(--c4);
     color: var(--c3);
     border-radius: 50%;
     width: 15px;
     height: 15px;
 }
-
 
 .logo img {
     height: 67px;
@@ -205,48 +209,30 @@ input {
     display: none;
 }
 
-.about .row {
+.about {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.row {
     display: flex;
     align-items: center;
-    background: var(--black);
-    flex-wrap: wrap;
-    width: 100%;
-    padding: 10px;
+    justify-content: space-between;
 }
 
-.about .row .image {
-    flex: 1 1 300px;
-}
-
-.about .row .image img {
-    width: 80%;
+.image img {
+    max-width: 100%;
     height: auto;
 }
 
-.about .row .content {
-    flex: 1 1 300px;
-    background-color: #592f16;
-    padding: 20px;
-}
-
-.about .row .content h3 {
-    font-size: 2rem;
-    color: #fff;
-}
-
-.about .row .content p {
-    font-size: 1.2rem;
-    color: #ccc;
-    padding: 1rem 0;
-    line-height: 1.6;
+.content {
+    flex: 1;
+    margin-left: 20px;
 }
 
 .heading {
     text-align: center;
-    color: #fff;
-    text-transform: uppercase;
-    padding-bottom: 2rem;
-    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
 .heading span {
@@ -371,7 +357,195 @@ input {
     color: #069c44;
 }
 
-/* ======== MEDIA QUERIES ======== */
+
+.historia {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: left;
+}
+
+.historia-header {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.historia-header h2 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #d97a3a;
+    color: var(--c3);
+    padding: 10px 20px;
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.historia-header img {
+    width: 100%;
+    display: block;
+    margin-top: 50px;
+}
+
+.historia-conteudo {
+    display: flex;
+    margin: 20px 0;
+    gap: 20px;
+}
+
+.ano-vertical {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 1.5em;
+    color: #d97a3a;
+    font-weight: bold;
+    padding-right: 10px;
+    border-right: 3px solid #d97a3a;
+}
+
+.texto {
+    flex: 1;
+    line-height: 1.6;
+    font-size: 1em;
+}
+
+.texto p {
+   color: var(--c3);
+}
+
+.missoes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    color: #d97a3a;
+    font-size: 0.9em;
+}
+
+.missoes div {
+    max-width: 30%;
+    line-height: 1.4;
+}
+footer {
+    background: #2c2c2c;
+    color: #fff;
+    padding: 40px 20px 20px;
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    gap: 30px;
+    text-align: center;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-section h2 {
+    margin-bottom: 15px;
+    color: #f4a261;
+    font-size: 1.3rem;
+    border-bottom: 2px solid #f4a261;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.footer-section p {
+    color: #592f16;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.footer-section .contactar {
+    color: #ccc;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 8px 0;
+}
+
+.footer-section ul li a {
+    color: #ccc;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #f4a261;
+}
+
+/* REDES SOCIAIS */
+.social-links {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f4a261;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+.social-links a img {
+    width: 35%;
+    height: 55%;
+    object-fit: contain;
+}
+
+.social-links a:hover {
+    background: #e76f51;
+}
+
+/* PARTE INFERIOR */
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #444;
+    font-size: 0.9rem;
+    color: #bbb;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
+
 
 @media (max-width: 1024px) {
     .conteudo {
