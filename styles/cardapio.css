@@ -360,7 +360,6 @@ nav ul li:hover a::after {
     transform-origin: center;
 }
 
-/* Animações para o modal */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }

@@ -8,33 +8,35 @@
   <link rel="stylesheet" href="../styles/cardapio.css">
 </head>
 <body>
-  <header>
-    <div class="header--menu">
-      <div class="logo"><img src="../docs/logoPN.png" alt="Logo"></div>
-      <div class="search--box">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="text" placeholder="Pesquisar">
-      </div>
-      <div class="menu--icons">
-        <img src="../docs/carrinho-de-compras.png" alt="Carrinho" id="openCart">
-      </div>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="cardapio.html">Nosso Cardápio</a></li>
-        <li><a href="Home.html">A Padaria</a></li>
-        <li><a href="faleConosco.html">Fale Conosco</a></li>
-        <li><a href="cadastro.html">Cadastro & Login</a></li>
-      </ul>
-    </nav>
-  </header>
+  <header class="header">
+        <div class="logo">
+            <img src="../docs/logoPN.png" alt="Logo">
+        </div>
+        <nav>
+            <nav class="header--menu">
+                <div class="search--box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Pesquisar">
+                </div>
+                <div class="menu--icons">
+                <i><img src="../docs/carrinho-de-compras.png" alt="Confete" class="fa-solid fa-cart-shopping"></i>
+                   </div>
+                </div>
+            </nav>
+            <ul>
+                <li><a href="cardapio.html">Nosso Cardápio</a></li>
+                <li><a href="Home.html">A Padaria</a></li>
+                <li><a href="faleConosco.html">Fale Conosco</a></li>
+                <li><a href="cadastro.html">Cadastro & Login</a></li>
+            </ul>
+        </nav>
+    </header>
 
   <section class="products" id="products">
     <h1 class="heading">Nosso <span>CARDÁPIO</span></h1>
     <div class="box-container"></div>
   </section>
 
-  <!-- Modal para detalhes -->
   <div id="itemModal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>

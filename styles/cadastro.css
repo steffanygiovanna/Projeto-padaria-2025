@@ -1,71 +1,47 @@
+/* ====== ESTILO BASE ====== */
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
     background-color: #f8f8f8;
+    padding: 20px;
 }
 
-.btn-voltar-site {
-    display: inline-block;
-    position: absolute;
-    top: 24px;
-    left: 24px;
-    background: #bfa76f;
-    color: #fff;
-    padding: 10px 22px 10px 16px;
-    border-radius: 30px;
-    font-size: 1.08rem;
-    font-weight: 600;
-    text-decoration: none;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    transition: background 0.2s, box-shadow 0.2s, color 0.2s;
-    z-index: 100;
-    letter-spacing: 0.5px;
-}
-.btn-voltar-site span {
-    font-size: 1.2em;
-    margin-right: 6px;
-    vertical-align: middle;
-}
-.btn-voltar-site:hover {
-    background: #a68d5d;
-    color: #fff;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.13);
-}
-
-@media (max-width: 600px) {
-    .btn-voltar-site {
-        top: 10px;
-        left: 10px;
-        padding: 8px 14px 8px 10px;
-        font-size: 0.98rem;
-    }
-}
 .container {
     display: flex;
+    flex-direction: column; /* permite reordenar elementos */
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 20px;
 }
 
 .login-box {
     background-color: #ffffff;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
     text-align: center;
     width: 100%;
     max-width: 400px;
 }
 
+.login-box img {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
 h1 {
     font-family: 'Georgia', serif;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     font-size: 2rem;
+    color: #333;
 }
 
 p {
@@ -81,7 +57,7 @@ p {
 
 .textbox input {
     width: 100%;
-    padding: 10px;
+    padding: 10px 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1rem;
@@ -105,17 +81,20 @@ p {
 .links a {
     color: #0066cc;
     text-decoration: none;
+    margin: 0 5px;
 }
 
 .links a:hover {
     text-decoration: underline;
 }
 
+/* ====== BOTÃO VOLTAR ====== */
 .btn-voltar-site {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 28px auto;
+    order: 0; /* padrão: acima da login-box */
+    margin: 0 auto 20px auto;
     background: #fff;
     color: #bfa76f;
     border: 2px solid #bfa76f;
@@ -125,16 +104,15 @@ p {
     font-weight: 600;
     text-decoration: none;
     box-shadow: 0 2px 12px rgba(191,167,111,0.08);
-    transition: background 0.2s, color 0.2s, border 0.2s, box-shadow 0.2s, transform 0.15s;
-    letter-spacing: 0.5px;
     gap: 8px;
-    position: relative;
+    transition: all 0.2s ease-in-out;
 }
+
 .btn-voltar-site span {
     font-size: 1.3em;
-    margin-right: 2px;
-    vertical-align: middle;
+    margin-right: 5px;
 }
+
 .btn-voltar-site:hover {
     background: #bfa76f;
     color: #fff;
@@ -143,59 +121,75 @@ p {
     transform: translateY(-2px) scale(1.04);
 }
 
-@media (max-width: 600px) {
-    .btn-voltar-site {
-        font-size: 0.98rem;
-        padding: 8px 14px 8px 10px;
-        margin-bottom: 18px;
-    }
+/* ====== BOTÃO LOGIN ====== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px auto;
+    background: #bfa76f;
+    color: #fff;
+    border: none;
+    padding: 10px 28px;
+    border-radius: 30px;
+    font-size: 1.08rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
 }
 
+.btn:hover {
+    background: #a68d5d;
+    transform: translateY(-2px) scale(1.04);
+}
+
+/* ====== INFORMAÇÕES DE VERSÃO ====== */
 .version-info {
     margin-top: 20px;
     font-size: 0.8em;
     color: #999;
 }
-
-/* ========== RESPONSIVO ========== */
-
-@media (max-width: 600px) {
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
     body {
+        padding: 15px;
         align-items: flex-start;
-        height: auto;
-        padding-top: 30px;
     }
 
     .login-box {
+        padding: 25px;
+        max-width: 350px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .textbox input {
+        font-size: 0.95rem;
+    }
+
+    .links {
+        font-size: 0.95rem;
+    }
+
+    /* botão volta para baixo */
+    .btn-voltar-site {
+        order: 1; /* move o botão para depois da login-box */
+        margin: 20px 0 0 0; /* distância do formulário */
+        width: 100%; /* ocupa toda a largura da login-box */
+        max-width: 350px; /* mesma largura da login-box */
+        justify-content: center; /* centraliza o texto do botão */
+    }
+}
+
+@media (max-width: 600px) {
+    .login-box {
         padding: 20px;
-        border-radius: 8px;
     }
 
     h1 {
         font-size: 1.5rem;
-    }
-
-    p {
-        font-size: 1rem;
-    }
-
-    .btn {
-        padding: 8px;
-        font-size: 0.9rem;
-    }
-
-    .links {
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 400px) {
-    .login-box {
-        padding: 15px;
-    }
-
-    h1 {
-        font-size: 1.3rem;
     }
 
     .textbox input {
@@ -205,5 +199,12 @@ p {
 
     .toggle-password {
         font-size: 0.9rem;
+    }
+
+    /* botão volta para baixo */
+    .btn-voltar-site {
+        width: 100%;
+        max-width: 300px; /* ajusta à largura menor */
+        margin: 20px 0 0 0;
     }
 }

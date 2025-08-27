@@ -1,5 +1,18 @@
 const container = document.querySelector('.box-container');
 
+const menuLinks = document.querySelectorAll('nav ul li a');
+
+menuLinks.forEach(link => {
+  link.addEventListener('click', e => {
+    // opcional: prevenir comportamento padrão, mas aqui não precisa
+    // e.preventDefault(); 
+
+    const href = link.getAttribute('href');
+    // abrir a página clicada
+    window.location.href = href;
+  });
+});
+
 cardapio.forEach(produto => {
   const box = document.createElement('div');
   box.className = 'box';
