@@ -7,8 +7,8 @@ if (carrinho == null) {
 }
 
 function exibirCarrinho() {
-    tbody.innerHTML = ""; // Limpa o conteúdo atual do tbody
-    let total = 0; // Inicializa a variável total
+    tbody.innerHTML = "";
+    let total = 0;
     carrinho.forEach((produto, indice) => {
         const tr = document.createElement('tr');
         tr.innerHTML = `
@@ -25,7 +25,7 @@ function exibirCarrinho() {
             <td>${produto.total.toFixed(2)}</td>
         `;
         tbody.appendChild(tr);
-        total += produto.total; // Adiciona o preço do produto ao total
+        total += produto.total;
     });
     const trTotal = document.createElement('tr');
     trTotal.innerHTML = `
@@ -43,27 +43,27 @@ function exibirCarrinho() {
 function add(indice) {
     const produto = carrinho[indice];
     let frete = produto.frete * produto.peso * produto.preco;
-    produto.quantidade += 1; // Incrementa a quantidade
-    produto.total = (produto.preco + frete) * produto.quantidade; // Atualiza o total
-    localStorage.setItem('carrinho', JSON.stringify(carrinho)); // Atualiza o localStorage
-    exibirCarrinho(); // Atualiza a exibição do carrinho
+    produto.quantidade += 1;
+    produto.total = (produto.preco + frete) * produto.quantidade;
+    localStorage.setItem('carrinho', JSON.stringify(carrinho));
+    exibirCarrinho();
 }
 
 function sub(indice) {
     const produto = carrinho[indice];
     let frete = produto.frete * produto.peso * produto.preco;
-    produto.quantidade -= 1; // Incrementa a quantidade
-    produto.total = (produto.preco + frete) * produto.quantidade; // Atualiza o total
-    localStorage.setItem('carrinho', JSON.stringify(carrinho)); // Atualiza o localStorage
-    exibirCarrinho(); // Atualiza a exibição do carrinho
+    produto.quantidade -= 1;
+    produto.total = (produto.preco + frete) * produto.quantidade;
+    localStorage.setItem('carrinho', JSON.stringify(carrinho));
+    exibirCarrinho();
     if(produto.quantidade == 0){
-        carrinho.splice(indice, 1); // Remove o produto do carrinho
-        localStorage.setItem('carrinho', JSON.stringify(carrinho)); // Atualiza o localStorage
-        exibirCarrinho(); // Atualiza a exibição do carrinho
+        carrinho.splice(indice, 1);
+        localStorage.setItem('carrinho', JSON.stringify(carrinho));
+        exibirCarrinho();
     }
 }
 
 function enviarPedido() {
-    window.localStorage.removeItem('carrinho'); // Remove o carrinho do localStorage
-    window.location.href = 'home.html'; // Redireciona para a página inicial
+    window.localStorage.removeItem('carrinho');
+    window.location.href = 'home.html';
 }

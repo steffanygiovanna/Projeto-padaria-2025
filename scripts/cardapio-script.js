@@ -1,6 +1,5 @@
 const container = document.querySelector('.box-container');
 
-// Exibe os produtos
 cardapio.forEach(produto => {
   const box = document.createElement('div');
   box.className = 'box';
@@ -25,18 +24,33 @@ cardapio.forEach(produto => {
   container.appendChild(box);
 });
 
-// Ações dos botões
+const searchInput = document.querySelector('.search--box input');
+
 container.addEventListener('click', e => {
   const id = parseInt(e.target.dataset.id);
-  if (e.target.classList.contains('btn-fav')) toggleFavorito(id);
+  if (e.target.classList.contains('btn-fav')) {
+    toggleFavorito(id, e.target);
+  }
   if (e.target.classList.contains('btn-cart')) adicionarCarrinho(id);
   if (e.target.classList.contains('btn-view')) abrirModal(id);
 });
 
-function toggleFavorito(id) {
-  let favs = JSON.parse(localStorage.getItem('favs')) || [];
+searchInput.addEventListener('input', () => {
+  const searchTerm = searchInput.value.toLowerCase();
+  const boxes = document.querySelectorAll('.box');
+
+  boxes.forEach(box => {
+    const productName = box.querySelector('.content h3').textContent.toLowerCase();
+    box.style.display = productName.includes(searchTerm) ? 'block' : 'none';
+  });
+});
+
+function toggleFavorito(id, heartIcon) {
+  let favs = JSON.parse(localStorage.getItem('favs')) || [];  
   favs = favs.includes(id) ? favs.filter(i => i !== id) : [...favs, id];
   localStorage.setItem('favs', JSON.stringify(favs));
+  
+  heartIcon.classList.toggle('favoritado', favs.includes(id));
 }
 
 function adicionarCarrinho(id) {
@@ -57,9 +71,9 @@ function abrirModal(id) {
   document.getElementById('modal-nome').textContent = produto.nome;
   document.getElementById('modal-desc').textContent = produto.descricao;
   document.getElementById('modal-preco').textContent = `R$ ${produto.preco.toFixed(2).replace('.', ',')}`;
-  const avaliacoes = Array.from({ length: 5 }).map(() => Math.random() * 4 + 1); // Simula
-  const media = (avaliacoes.reduce((a,b)=>a+b,0)/avaliacoes.length).toFixed(1);
-  document.getElementById('modal-avaliacao').textContent = `Média de avaliação: ${media} / 5`;
+  const avaliacoes = Array.from({ length: 5 }).map(() => Math.random() * 5 + 5);
+  const media = (avaliacoes.reduce((a,b)=>a+b,5)/avaliacoes.length).toFixed(1);
+  document.getElementById('modal-avaliacao').textContent = `Média de avaliação: ${media} / 10`;
   modal.style.display = 'block';
 }
 
