@@ -261,77 +261,145 @@ nav ul li:hover a::after {
     align-items: center;
     justify-content: center;
 }
-
-.sidebar{
-    width: 300px;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    right: -300px;
-    background-color: whitesmoke;
-    box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
-    transition: right 0.3s ease-in-out;
-    z-index: 1000;
-    padding: 20px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-}
-.sidebar.open{
-    right: 0;
-}
-.sideabar-close{
-    position: absolute;
-    right: 20px;
-    top: 10px;
-    cursor: pointer;
+/* === CARRINHO LATERAL COM ESTILO PERSONALIZADO === */
+.sidebar-carrinho {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 370px;
+  height: 100%;
+  background-color: var(--bg);
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.4);
+  z-index: 9999;
+  padding: 25px 20px;
+  overflow-y: auto;
+  transition: right 0.4s ease;
+  font-family: 'Segoe UI', sans-serif;
+  color: var(--c3);
+  border-left: var(--border);
 }
 
-.cart-items{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 1rem;
-}
-.cart-items{
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 5px;
-    border-radius: 5px;
-    color: black;
-    border: 1px solid powderblue;
-}
-.cart-items-price{
-    color: var(--c1);
+.sidebar-carrinho.aberta {
+  right: 0;
 }
 
-.sidebar--footer{
-    position: absolute;
-    bottom: 10px;
-    width: 88%;
+.sidebar-carrinho .fechar-btn {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: var(--c3);
+  cursor: pointer;
+  transition: color 0.3s;
 }
 
-.total--amount{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border: 2px solid powderblue;
-    border-radius: 5px;
-    padding: 15px 10px;
+.sidebar-carrinho .fechar-btn:hover {
+  color: var(--main-color);
 }
-.cart-total{
-    font-size: 16px;
-    color: var(--main-color);
-    font-weight: 500;
+
+.sidebar-carrinho h2 {
+  margin: 30px 0 15px;
+  font-size: 24px;
+  color: var(--main-color);
+  border-bottom: 2px solid var(--main-color);
+  padding-bottom: 10px;
+  letter-spacing: 1px;
 }
-.checkout-btn{
-    width: 100%;
-    margin-top: 2rem;
-    background: green;
-    color: greenyellow;
-    border-radius: 5px;
-    cursor: pointer;
-    padding: 10px;
+
+/* === Itens do carrinho === */
+#carrinho-itens {
+  margin-top: 10px;
 }
+
+.item-carrinho {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 22px;
+  border-bottom: 1px dashed var(--c3);
+  padding-bottom: 16px;
+}
+
+.item-carrinho img {
+  width: 65px;
+  height: 65px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--main-color);
+}
+
+.item-info {
+  flex: 1;
+}
+
+.item-info p {
+  margin: 3px 0;
+  font-size: 14px;
+  color: var(--t2);
+}
+
+.item-info p strong {
+  font-size: 16px;
+  color: var(--c3);
+}
+
+/* === Botões + e - === */
+.quantidade-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.quantidade-controls button {
+  width: 28px;
+  height: 28px;
+  background-color: var(--main-color);
+  border: none;
+  border-radius: 4px;
+  font-size: 18px;
+  color: var(--black);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.quantidade-controls button:hover {
+  background-color: #e0a958;
+  transform: scale(1.1);
+}
+
+/* === Total === */
+#carrinho-total {
+  margin-top: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--main-color);
+  border-top: 2px solid var(--main-color);
+  padding-top: 15px;
+  text-align: right;
+}
+
+.sidebar-carrinho button.finalizar {
+  width: 100%;
+  margin-top: 20px;
+  padding: 14px;
+  background-color: var(--main-color);
+  color: var(--black);
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+.sidebar-carrinho button.finalizar:hover {
+  background-color: #e0a958;
+  transform: scale(1.02);
+}
+
 
 /* Estilo para o modal */
 .modal {
@@ -457,6 +525,7 @@ nav ul li:hover a::after {
             margin-right: 10px; /* Aumenta o espaçamento entre as estrelas */
         }
     }
+
 
 /* ============ RESPONSIVIDADE ============ */
 

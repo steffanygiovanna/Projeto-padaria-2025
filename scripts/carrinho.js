@@ -1,69 +1,141 @@
-const tbody = document.querySelector("tbody");
-var carrinho = JSON.parse(localStorage.getItem('carrinho'));
-if (carrinho == null) {
-    carrinho = [];
-}else{
-    exibirCarrinho();
+// Abrir e fechar a aba lateral do carrinho
+document.querySelector('.fa-cart-shopping').addEventListener('click', abrirCarrinho);
+
+function abrirCarrinho() {
+  const sidebar = document.getElementById("carrinhoSidebar");
+  sidebar.classList.add("aberta");
+  mostrarCarrinhoSidebar();
 }
 
-function exibirCarrinho() {
-    tbody.innerHTML = "";
-    let total = 0;
-    carrinho.forEach((produto, indice) => {
-        const tr = document.createElement('tr');
-        tr.innerHTML = `
-            <td>${produto.id}</td>
-            <td>${produto.nome}</td>
-            <td>${produto.descricao}</td>
-            <td>R$ ${produto.preco.toFixed(2)}</td>
-            <td><img src='${produto.imagem}'></td>
-            <td>
-                <button onclick='add(${indice})'>+</button>
-                <input type='number' value='${produto.quantidade}' disabled=true>
-                <button onclick='sub(${indice})'>-</button>
-            </td>
-            <td>${produto.total.toFixed(2)}</td>
-        `;
-        tbody.appendChild(tr);
-        total += produto.total;
-    });
-    const trTotal = document.createElement('tr');
-    trTotal.innerHTML = `
-        <td colspan="6">Total</td>
-        <td>R$ ${total.toFixed(2)}</td>
+function fecharCarrinho() {
+  const sidebar = document.getElementById("carrinhoSidebar");
+  sidebar.classList.remove("aberta");
+}
+
+// Mostra os itens do carrinho na sidebar
+function mostrarCarrinhoSidebar() {
+  const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+  const container = document.getElementById("carrinho-itens");
+  const totalDiv = document.getElementById("carrinho-total");
+  container.innerHTML = "";
+
+  if (carrinho.length === 0) {
+    container.innerHTML = "<p>Seu carrinho está vazio.</p>";
+    totalDiv.innerHTML = "";
+    return;
+  }
+
+  let total = 0;
+
+  carrinho.forEach(produto => {
+    const subtotal = (produto.preco * produto.quantidade);
+    total += subtotal;
+
+    const itemDiv = document.createElement("div");
+    itemDiv.innerHTML = `
+      <strong>${produto.nome}</strong><br>
+      Quantidade: ${produto.quantidade}<br>
+      Preço: R$ ${produto.preco.toFixed(2)}<br>
+      Subtotal: R$ ${subtotal.toFixed(2)}
     `;
-    tbody.appendChild(trTotal);
-    const trEnviar = document.createElement('tr');
-    trEnviar.innerHTML = `
-        <td colspan="7"><button onclick='enviarPedido()'>Enviar Pedido</button></td>
+    container.appendChild(itemDiv);
+  });
+
+  totalDiv.innerHTML = `Total: R$ ${total.toFixed(2)}`;
+}
+
+function mostrarCarrinhoSidebar() {
+  const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+  const container = document.getElementById("carrinho-itens");
+  const totalDiv = document.getElementById("carrinho-total");
+  container.innerHTML = "";
+
+  if (carrinho.length === 0) {
+    container.innerHTML = "<p>Seu carrinho está vazio.</p>";
+    totalDiv.innerHTML = "";
+    return;
+  }
+
+  let total = 0;
+
+  carrinho.forEach(produto => {
+    const subtotal = (produto.preco * produto.quantidade);
+    total += subtotal;
+
+    const itemDiv = document.createElement("div");
+    itemDiv.classList.add("item-carrinho");
+    itemDiv.innerHTML = `
+      <img src="${produto.imagem}" alt="${produto.nome}">
+      <div class="item-info">
+        <p><strong>${produto.nome}</strong></p>
+        <p>Qtd: ${produto.quantidade}</p>
+        <p>R$ ${produto.preco.toFixed(2)} cada</p>
+        <p><em>Subtotal: R$ ${subtotal.toFixed(2)}</em></p>
+      </div>
     `;
-    tbody.appendChild(trEnviar);
+    container.appendChild(itemDiv);
+  });
+
+  totalDiv.innerHTML = `Total: R$ ${total.toFixed(2)}`;
 }
 
-function add(indice) {
-    const produto = carrinho[indice];
-    let frete = produto.frete * produto.peso * produto.preco;
-    produto.quantidade += 1;
-    produto.total = (produto.preco + frete) * produto.quantidade;
-    localStorage.setItem('carrinho', JSON.stringify(carrinho));
-    exibirCarrinho();
+function mostrarCarrinhoSidebar() {
+  const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+  const container = document.getElementById("carrinho-itens");
+  const totalDiv = document.getElementById("carrinho-total");
+  container.innerHTML = "";
+
+  if (carrinho.length === 0) {
+    container.innerHTML = "<p>Seu carrinho está vazio.</p>";
+    totalDiv.innerHTML = "";
+    return;
+  }
+
+  let total = 0;
+
+  carrinho.forEach((produto, index) => {
+    const subtotal = produto.preco * produto.quantidade;
+    total += subtotal;
+
+    const itemDiv = document.createElement("div");
+    itemDiv.classList.add("item-carrinho");
+    itemDiv.innerHTML = `
+      <img src="${produto.imagem}" alt="${produto.nome}">
+      <div class="item-info">
+        <p><strong>${produto.nome}</strong></p>
+        <p>Preço: R$ ${produto.preco.toFixed(2)}</p>
+        <p>Subtotal: R$ ${subtotal.toFixed(2)}</p>
+        <div class="quantidade-controls">
+          <button onclick="alterarQuantidade(${index}, -1)">−</button>
+          <span>${produto.quantidade}</span>
+          <button onclick="alterarQuantidade(${index}, 1)">+</button>
+        </div>
+      </div>
+    `;
+    container.appendChild(itemDiv);
+  });
+
+  totalDiv.innerHTML = `Total: R$ ${total.toFixed(2)}`;
 }
 
-function sub(indice) {
-    const produto = carrinho[indice];
-    let frete = produto.frete * produto.peso * produto.preco;
-    produto.quantidade -= 1;
-    produto.total = (produto.preco + frete) * produto.quantidade;
-    localStorage.setItem('carrinho', JSON.stringify(carrinho));
-    exibirCarrinho();
-    if(produto.quantidade == 0){
-        carrinho.splice(indice, 1);
-        localStorage.setItem('carrinho', JSON.stringify(carrinho));
-        exibirCarrinho();
-    }
+function alterarQuantidade(index, delta) {
+  let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+
+  carrinho[index].quantidade += delta;
+
+  // Remover se quantidade for zero ou menos
+  if (carrinho[index].quantidade <= 0) {
+    carrinho.splice(index, 1);
+  }
+
+  localStorage.setItem("carrinho", JSON.stringify(carrinho));
+  mostrarCarrinhoSidebar();
 }
 
-function enviarPedido() {
-    window.localStorage.removeItem('carrinho');
-    window.location.href = 'home.html';
+
+// Botão finalizar
+function finalizarPedido() {
+  alert("Pedido finalizado com sucesso!");
+  localStorage.removeItem("carrinho");
+  fecharCarrinho();
 }
