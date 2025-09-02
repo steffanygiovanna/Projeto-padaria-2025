@@ -524,6 +524,44 @@ footer {
     background: #e76f51;
 }
 
+.autor {
+    margin: 10px auto;
+    width: fit-content;
+}
+
+.nomes {
+    text-decoration: none;
+}
+
+.bloco {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.bloco:hover {
+    background-color: #e0f0ff;
+    transform: scale(1.02);
+}
+
+.bloco img {
+    width: 24px;
+    height: 24px;
+}
+
+.bloco p {
+    margin: 0;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+}
+
+
 /* PARTE INFERIOR */
 .footer-bottom {
     text-align: center;
