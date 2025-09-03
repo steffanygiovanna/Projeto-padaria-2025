@@ -3,29 +3,39 @@ const prisma = new PrismaClient();
 
 const create = async (req, res) => {
     try {
-        const estoque = await prisma.estoque.create({
-            data: req.body
+        const { produto_id, tipo, quantidade, data_movimento } = req.body;
+
+        const movimentoEstoque = await prisma.movimentoEstoque.create({
+            data: {
+                tipo,
+                quantidade: Number(quantidade),
+                data_movimento: data_movimento ? new Date(data_movimento) : undefined,
+                produto: {
+                    connect: { produto_id: Number(produto_id) }
+                }
+            }
         });
-        return res.status(201).json(estoque);
+
+        return res.status(201).json(movimentoEstoque);
     } catch (error) {
         return res.status(400).json({ error: error.message });
     }
-}
+};
 
 const read = async (req, res) => {
-    const estoque = await prisma.estoque.findMany();
-    res.json(estoque);
+    const movimentoEstoque = await prisma.movimentoEstoque.findMany();
+    res.json(movimentoEstoque);
 }
 
 
 const readOne = async (req, res) => {
     try {
-        const estoque = await prisma.estoque.findUnique({
+        const movimentoEstoque = await prisma.movimentoEstoque.findUnique({
             where: {
-                estoque_id: Number(req.params.id)
+                movimentoEstoque_id: Number(req.params.id)
             }
         });
-        return res.json(estoque);
+        return res.json(movimentoEstoque);
     } catch (error) {
         return res.status(400).json({ error: error.message });
     }
@@ -33,35 +43,44 @@ const readOne = async (req, res) => {
 
 const update = async (req, res) => {
     try {
-        const estoque = await prisma.estoque.update({
-            where: {
-                estoque_id: Number(req.params.id)
-            },
-            data: req.body
+        const { produto_id, tipo, quantidade, data_movimento } = req.body;
+
+        const movimentoEstoque = await prisma.movimentoEstoque.update({
+            where: { estoque_id: Number(req.params.id) },
+            data: {
+                tipo,
+                quantidade: Number(quantidade),
+                data_movimento: data_movimento ? new Date(data_movimento) : undefined,
+                produto: {
+                    connect: { produto_id: Number(produto_id) }
+                }
+            }
         });
-        return res.status(202).json(estoque);
+
+        return res.status(202).json(movimentoEstoque);
     } catch (error) {
         return res.status(400).json({ error: error.message });
     }
-}
+};
 
 const remove = async (req, res) => {
     try {
-        await prisma.estoque.delete({
-            where: {
-                estoque_id: Number(req.params.id)
-            }
-        });
-        return res.status(204).send();
-    } catch (error) {
-        return res.status(404).json({ error: error.message });
-    }
-}
+        const { id } = req.params;
 
-module.exports = { 
-    create, 
-    read, 
-    readOne, 
-    update, 
-    remove 
+        await prisma.movimentoEstoque.delete({
+            where: { estoque_id: Number(id) }
+        });
+
+        return res.status(204).json({ message: "Movimento de estoque removido com sucesso" });
+    } catch (error) {
+        return res.status(400).json({ error: error.message });
+    }
+};
+
+module.exports = {
+    create,
+    read,
+    readOne,
+    update,
+    remove
 };

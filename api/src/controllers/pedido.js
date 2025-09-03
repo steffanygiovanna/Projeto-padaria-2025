@@ -4,7 +4,13 @@ const prisma = new PrismaClient();
 const create = async (req, res) => {
     try {
         const pedido = await prisma.pedido.create({
-            data: req.body
+            data: {
+                sub_total: req.body.sub_total,
+                data: req.body.data ? new Date(req.body.data) : undefined,
+                cliente: {
+                    connect: { cliente_id: Number(req.body.cliente_id) }
+                }
+            }
         });
         return res.status(201).json(pedido);
     } catch (error) {
@@ -58,10 +64,10 @@ const remove = async (req, res) => {
     }
 }
 
-module.exports = { 
-    create, 
-    read, 
-    readOne, 
-    update, 
-    remove 
+module.exports = {
+    create,
+    read,
+    readOne,
+    update,
+    remove
 };

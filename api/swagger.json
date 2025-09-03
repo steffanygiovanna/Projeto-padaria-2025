@@ -502,8 +502,7 @@
                                     "sub_total": {
                                         "type": "string",
                                         "default": null
-                                    },
-                                     "required": ["cliente_id", "sub_total"]
+                                    }
                                 }
                             }
                         }
@@ -983,8 +982,8 @@
                                         "default": "Entrada"
                                     },
                                     "quantidade": {
-                                        "type": "string",
-                                        "default": "25"
+                                        "type": "int",
+                                        "default": 25
                                     },
                                     "data_movimento": {
                                         "type": "string",
