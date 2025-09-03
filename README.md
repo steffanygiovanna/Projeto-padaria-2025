@@ -49,7 +49,7 @@ Funcionalidades principais implementadas, como:
 - [ ] Entregas através do repositório do projeto no GitHub, com evidências dos testes em relatório no formato PDF.
 
 # **Mobile(figma)**
--  [Protótipo Funcional](https://www.figma.com/proto/xoCD30ohb0krTrwOxEliXa/Prot%C3%B3tipo-Funcional?node-id=2-309&starting-point-node-id=76%3A166)
+-  [Protótipo Funcional] (https://www.figma.com/proto/JjGNnIbInPhBAW3oVJMBKU/padaria?node-id=49-5133&p=f&t=nvc4OQRz6lpDZzki-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1)
 
 ## Requisitos Funcionais
 
