@@ -338,8 +338,8 @@
                                         "default": "Pao Frances"
                                     },
                                     "preco": {
-                                        "type": "string",
-                                        "default": "0.80"
+                                        "type": "float",
+                                        "default": 0.80
                                     },
                                     "descricao": {
                                         "type": "string",
@@ -493,16 +493,17 @@
                                 "properties": {
                                     "cliente_id": {
                                         "type": "integer",
-                                        "default": "1"
+                                        "default": 1
                                     },
                                     "data": {
                                         "type": "string",
                                         "default": null
                                     },
-                                    "subtotal": {
+                                    "sub_total": {
                                         "type": "string",
                                         "default": null
-                                    }
+                                    },
+                                     "required": ["cliente_id", "sub_total"]
                                 }
                             }
                         }
