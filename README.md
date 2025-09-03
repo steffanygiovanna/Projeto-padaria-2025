@@ -51,6 +51,10 @@ Funcionalidades principais implementadas, como:
 # **Mobile(figma)**
 -  [Protótipo Funcional] (https://www.figma.com/proto/JjGNnIbInPhBAW3oVJMBKU/padaria?node-id=49-5133&p=f&t=nvc4OQRz6lpDZzki-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1)
 
+# **Relatório de Testes**
+-  [Relatório] ()
+  
+
 ## Requisitos Funcionais
 
 - [RF001] O sistema deve permitir que o Cliente realize pedidos, escolhendo os itens desejados.
