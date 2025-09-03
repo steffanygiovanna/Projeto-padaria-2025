@@ -1,19 +1,16 @@
 const nodemailer = require('nodemailer');
-
-// Função para enviar e-mail para o cliente com senha provisória
 async function enviarEmailCliente(emailCliente, senhaProvisoria) {
-    // Configuração do transporte SMTP (ajuste para seu provedor de e-mail)
+   
     let transporter = nodemailer.createTransport({
-        host: 'smtp-mail.outlook.com', // Altere para o host SMTP real
+        host: 'smtp-mail.outlook.com', 
         port: 587,
-        secure: false, // true para 465, false para outros
+        secure: false, 
         auth: {
-            user: 'contacorporativa@hotmail.com', // Seu e-mail
-            pass: 'SenhaDoSeuEmail' // Sua senha ou app password
+            user: 'contacorporativa@hotmail.com', 
+            pass: 'SenhaDoSeuEmail' 
         }
     });
 
-    // Conteúdo do e-mail
     let mailOptions = {
         from: 'contacorporativa@hotmail.com',
         to: emailCliente,

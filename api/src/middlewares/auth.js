@@ -1,7 +1,6 @@
 const jsonwebtoken = require("jsonwebtoken");
 const bcrypt = require('bcrypt');
 
-// Middleware para validar token JWT dos clientes
 const validate = (req, res, next) => {
     const token = req.headers.authorization?.split(" ")[1];
     if (!token) 
@@ -9,14 +8,13 @@ const validate = (req, res, next) => {
 
     try {
         const payload = jsonwebtoken.verify(token, process.env.SECRET_JWT);
-        req.headers['cliente'] = payload; // Armazena o payload do cliente
+        req.headers['cliente'] = payload; 
         next();
     } catch (err) {
         res.status(403).send({ message: "Token inválido ou expirado." }).end();
     }
 }
 
-// Criar hash da senha do cliente (usado na criação de cliente e no login)
 const createHash = async (senha) => {
     if (!senha) return null;
     try {
@@ -29,7 +27,7 @@ const createHash = async (senha) => {
     }
 }
 
-// Validar a senha do cliente (usado no login)
+
 const validatePassword = async (senha, hash) => {
     if (!senha || !hash) return false;
     try {
