@@ -4,7 +4,7 @@ CREATE TABLE `Cliente` (
     `nome` VARCHAR(191) NOT NULL,
     `email` VARCHAR(191) NOT NULL,
     `senha` VARCHAR(191) NOT NULL,
-    `telefone` INTEGER NOT NULL,
+    `telefone` VARCHAR(191) NOT NULL,
     `endereco` VARCHAR(100) NULL,
 
     UNIQUE INDEX `Cliente_email_key`(`email`),
