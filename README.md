@@ -11,6 +11,10 @@
 - [API da Padaria](https://github.com/Rebecaalimaa/padaria-api)
 - [WEB da Padaria](https://github.com/joaoangra/Web-Padaria-2025)
 
+## Como iniciar
+- Crie o arquivo `.env` na raiz do projeto contendo
+```js
+DATABASE_URL="mysql://root@localhost:3306/padaria?schema=public&timezone=UTC"
 
 ## Backlog do Projeto final
 
