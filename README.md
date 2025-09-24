@@ -15,6 +15,7 @@
 - Crie o arquivo `.env` na raiz do projeto contendo
 ```js
 DATABASE_URL="mysql://root@localhost:3306/padaria?schema=public&timezone=UTC"
+```
 
 ## Backlog do Projeto final
 
