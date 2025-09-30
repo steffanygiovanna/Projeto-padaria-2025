@@ -98,7 +98,7 @@ Funcionalidades principais implementadas, como:
 ![](./docs/Canvas.png)
 
 ## Padaria (Gantt)
-![](./docs/Gantt.png)
+![](./docs/gant.jpeg)
 
 ## Padaria (SWOT)
 ![](./docs/swot.jpeg)
