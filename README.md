@@ -101,7 +101,7 @@ Funcionalidades principais implementadas, como:
 ![](./docs/Gantt.png)
 
 ## Padaria (SWOT)
-![](./docs/SWOT.png)
+![](./docs/swot.jpeg)
 
 ## Padaria (Triângulo de Ferro)
 ![](./docs/Triangulo.png)
