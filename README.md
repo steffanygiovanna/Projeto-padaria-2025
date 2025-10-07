@@ -85,12 +85,12 @@ Nesta sprint, vamos focar na implantação do projeto, garantindo que tudo estej
 
 ## Requisitos Funcionais
 
-- [RF001] O sistema deve permitir que o Cliente realize pedidos, escolhendo os itens desejados.
-- [RF002] O sistema deve permitir que Clientes, Funcionários e Gerente verifiquem a disponibilidade de itens no estoque.
-- [RF003] O sistema deve permitir que o Cliente realize o pagamento do pedido.
-- [RF004] O sistema deve processar a compra, incluindo cálculo de valores, validação do pagamento e registro do pedido.
-- [RF005] O sistema deve permitir que o Cliente confirme o pedido após o processamento.
-- [RF006] O sistema deve permitir que o Cliente selecione a forma de recebimento (ex.: entrega por motoboy, retirada, etc).
+- [x] - [RF001] O sistema deve permitir que o Cliente realize pedidos, escolhendo os itens desejados.
+- [x] - [RF002] O sistema deve permitir que Clientes, Funcionários e Gerente verifiquem a disponibilidade de itens no estoque.
+- [x] - [RF003] O sistema deve permitir que o Cliente realize o pagamento do pedido.
+- [x] - [RF004] O sistema deve processar a compra, incluindo cálculo de valores, validação do pagamento e registro do pedido.
+- [x] - [RF005] O sistema deve permitir que o Cliente confirme o pedido após o processamento.
+- [x] - [RF006] O sistema deve permitir que o Cliente selecione a forma de recebimento (ex.: entrega por motoboy, retirada, etc).
 - [RF007] O sistema deve permitir que o Funcionário atenda o cliente durante o processo de compra.
 - [RF008] O sistema deve permitir que o Funcionário prepare os pedidos confirmados.
 - [RF009] O sistema deve permitir que o Funcionário entre em contato com o motoboy para realizar a entrega.
