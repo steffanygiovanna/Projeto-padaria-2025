@@ -59,9 +59,9 @@ Funcionalidades principais implementadas, como:
 
 ## 5º Sprint 06/10 Backlog
 Nesta sprint, vamos focar na implantação do projeto, garantindo que tudo esteja funcionando corretamente em um ambiente de produção. Também faremos uma revisão final do código e documentação.
-- [ ] **Implantação** do Back-End em um serviço de nuvem (ex: Vercel, Heroku, AWS).
+- [x] **Implantação** do Back-End em um serviço de nuvem (ex: Vercel, Heroku, AWS).
 - [x] **Implantação** do Front-End em um serviço de nuvem (ex: Vercel, GitHub Pages).
-- [ ] Iniciar o desenvolvimento do App **Mobile** (Funcionalidades principais).
+- [x] Iniciar o desenvolvimento do App **Mobile** (Funcionalidades principais).
 - [ ] Testes de integração e ponto a ponto (Caixa preta e Caixa branca).
     - [ ] Após o **back-end** implantado, Criar um Roteiro/check-list e testar manualmente (**Teste de integração: Back/BD**) a API a partir do **Insomnia** e documentar os testes. Tirando prints e fazendo um relatório. (**Caixa branca**).
     - [x] Após o **front-end** implantado, Criar um Roteiro/check-list para testar o **Front-End** manualmente (**Teste ponto a ponto**), fazer um relatório dos testes. (**Caixa branca**).
