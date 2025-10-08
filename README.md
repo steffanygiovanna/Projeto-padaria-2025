@@ -12,7 +12,7 @@
 - [WEB da Padaria](https://github.com/joaoangra/Web-Padaria-2025)
 
 ## Documentações (Caixa Branca)
-- [Insomnia]
+- [Insomnia](/Relatório%20de%20testes%20Caixa%20Branca%20(Insomnia).pdf)
 ## Como iniciar
 - Crie o arquivo `.env` na raiz do projeto conten
 - do
