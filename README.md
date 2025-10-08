@@ -7,7 +7,7 @@
 - [Thamye Souza](https://github.com/thamyeS)
 - [Pedro Oliveira](https://github.com/Pedrokk52)
 
-## Caminho para acessar nosso WEB e noosa API
+## Caminho para acessar nosso WEB e nossa API
 - [API da Padaria](https://github.com/Rebecaalimaa/padaria-api)
 - [WEB da Padaria](https://github.com/joaoangra/Web-Padaria-2025)
 
