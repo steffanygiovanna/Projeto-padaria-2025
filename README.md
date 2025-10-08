@@ -11,8 +11,11 @@
 - [API da Padaria](https://github.com/Rebecaalimaa/padaria-api)
 - [WEB da Padaria](https://github.com/joaoangra/Web-Padaria-2025)
 
+## Documentações (Caixa Branca)
+- [Insomnia](file:///C:/Users/Instrutor/Downloads/Relat%C3%B3rio%20de%20testes%20Caixa%20Branca%20(Insomnia).pdf)
 ## Como iniciar
-- Crie o arquivo `.env` na raiz do projeto contendo
+- Crie o arquivo `.env` na raiz do projeto conten
+- do
 ```js
 DATABASE_URL="mysql://root@localhost:3306/padaria?schema=public&timezone=UTC"
 ```
