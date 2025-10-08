@@ -13,10 +13,10 @@
 
 ## Documentações (Caixa Branca)
 - [API (Insomnia)](/Relatório%20de%20testes%20Caixa%20Branca%20(Insomnia).pdf)
-- [Front (Ponta a ponta)]( )
+- [Front (Ponta a ponta)](/Relatório%20de%20testes%20Caixa%20Branca%20(front).pdf)
   
 ## Documentações (Caixa Preta)
-- [API (Insomnia)]( /Relatorio_de_teste_caixa_preta(insominia).pdf)
+- [API (Insomnia)](/Relatorio%20de%20testes%20Caixa%20Preta%20(Insominia).pdf)
 - [Front (Ponta a ponta)]( )
   
 
