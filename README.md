@@ -94,33 +94,33 @@ npx prisma migrate dev --name init
 - [RF014] O sistema deve permitir que o Gerente faça login para acessar as funções administrativas.
 - [RF015] O sistema deve garantir que o Gerente só consiga fazer login se estiver cadastrado previamente.
 
-### Diagrama de Atividades
+### Diagrama de Caso de Uso
 
-![](./docs/Diagrama%20Cantina.png)
+![diagramacasodeuso](./docs/Diagrama%20Cantina.png)
 
 ## Trello
-![](./docs/Trello.png)
+![trello](./docs/Trello.png)
 
 ## Diagrama de Classes
-![](./docs/Diagrama_de_Classes.png)
+![diagramaclasses](./docs/Diagrama_de_Classes.png)
 
 ## DER (Diagrama, Entidade e Relacionamento)
-![](./docs/DER%20padaria.png)
+![der](./docs/DER%20padaria.png)
 
 ## Diagrama de Atividades
-![](./docs/Captura%20de%20tela%202025-06-18%20084534.png)
+![diagramaatividades](./docs/Captura%20de%20tela%202025-06-18%20084534.png)
 
 ## Canvas
-![](./docs/Canvas.png)
+![canvas](./docs/Canvas.png)
 
 ## Gráfico Gantt
-![](./docs/gant.jpeg)
+!graficogant[](./docs/gant.jpeg)
 
 ## Matriz SWOT
-![](./docs/swot.jpeg)
+![matrizswot](./docs/swot.jpeg)
 
 ## Triângulo de Ferro
-![imagemtringulo](./docs/Triangulo.png)
+![imagemtriangulo](./docs/Triangulo.png)
 
 
 
