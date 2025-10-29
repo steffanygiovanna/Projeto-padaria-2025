@@ -120,7 +120,7 @@ npx prisma migrate dev --name init
 ![](./docs/swot.jpeg)
 
 ## Triângulo de Ferro
-![](./docs/Triangulo.png)
+![imagemtringulo](./docs/Triangulo.png)
 
-//Sera?
+
 
