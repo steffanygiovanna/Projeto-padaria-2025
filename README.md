@@ -114,7 +114,7 @@ npx prisma migrate dev --name init
 ![canvas](./docs/Canvas.png)
 
 ## Gráfico Gantt
-!graficogant[](./docs/gant.jpeg)
+![graficogant](./docs/gant.jpeg)
 
 ## Matriz SWOT
 ![matrizswot](./docs/swot.jpeg)
