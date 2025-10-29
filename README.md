@@ -1,7 +1,7 @@
-# Projeto-padaria-2025
+# Projeto Padaria 2025
 
 # **Integrantes**
--  [Rebeca Lima](https://github.com/Rebecaalimaa)
+- [Rebeca Lima](https://github.com/Rebecaalimaa)
 - [Steffany Giovanna](https://github.com/steffanygiovanna)
 - [João Angra](https://github.com/joaoangra)
 - [Thamye Souza](https://github.com/thamyeS)
@@ -19,79 +19,62 @@
 - [API (Insomnia)](/Relatorio%20de%20testes%20Caixa%20Preta%20(Insominia).pdf)
 - [Front (Ponta a ponta)]( )
   
+  ## Sprint Final - Backlog de Entrega (Entrega em 26 de Novembro, Apresentações 02 e 03 de Dezembro)
+- [ ] Código fonte do Back-End no GitHub com README.md atualizado e implantado.(vercel)
+- [ ] Código fonte do Front-End no GitHub com README.md atualizado e implantado (git pages ou vercel).
+- [ ] Código fonte do Mobile no GitHub com README.md atualizado.
+- [ ] Documentação do projeto atualizada no repositório principal do GitHub em formato PDF.
+- [ ] Apresentação do projeto (slides, demo e documentação).
+  
+## Como testar 
+1. Configure o ambiente de desenvolvimento com as seguintes ferramentas.
 
-## Como iniciar
-- Crie o arquivo `.env` na raiz do projeto conten
-- do
-```js
+- [VsCode](https://code.visualstudio.com/)
+- [XAMPP](https://www.apachefriends.org/pt_br/index.html)
+- [Git](https://git-scm.com/downloads)
+- [NodeJS](https://nodejs.org/pt)
+
+2. Após a instalação das ferramentas siga esse passo para clonar o repositorio e testa-ló.
+
+- Copie o codigo HTTP no GitHub do repositorio que queira testar, abra o Git Bash em sua area de trabalho e coloque o seguinte codígo
+
+```bash
+git clone <https://url>
+```
+
+- Agora com o repositorio clonado, entre nela com o seguinte comando
+
+```bash
+cd <nomedoarquivo>
+```
+
+- Agora dentro do arquivo clonado pelo Git Bash, digite esse comando para abri-lo no VsCode
+
+```bash
+code .
+```
+
+- Com o arquivo aberto no VsCode, abra o CMD (CRTL+"), e coloque os seguinte comandos na ordem que aparecem logo abaixo
+
+```bash
+cd api
+npm i prisma -g
+npm init -y
+npm i express cors dotenv bcrypt jsonwebtoken
+npx prisma init --datasource-provider mysql
+```
+
+- Apos colocar os comandos em ordem no CMD crie um pasta chamada .env (caso os comandos dados ja tenham criado não será necessario)
+
+```bash
 DATABASE_URL="mysql://root@localhost:3306/padaria?schema=public&timezone=UTC"
 ```
 
-## Backlog do Projeto final
+- Faremos a migração do banco de dados para o MySQL através do comando a seguir no terminal
 
-### 1º Sprint
-- [x] Escolher a metodologia **SCRUM, KANBAN, XP, outras**
-- [x] Definir **Papéis e responsabilidades**
-- [x] Apresentar a proposta inicial
-  
-### 2º Sprint 
-- [x] Modelar o negócio no **[Canvas](https://wellifabio.github.io/canvas/)**
-- [x] Criar um cronograma **[Gráfico Gant](https://wellifabio.github.io/gantt/)**
-- [x] Criar um repositório no **github** com o nome do projeto ou tcc-nomeprojeto e adicionar os integrantes do grupo como colaboradores.
-    - Acrescentar um README.md com **link** para todas as **entregas**
-    - Poderá criar outros repositórios separados para back-end, front-end, mobile, etc porém todos os links devem estar no README do repositório principal
-    - Todo o documental do projeto, diagramas, wireframes e documento do projeto ABNT devem estar em uma pasta chamada **./docs**
-- [x] **Protótipo** funcional inicial (Com Figma - Mobile e Web)
-- [x] Elencar os **[requisitos funcionais como neste exemplo](./requisitos.md)**.
-    - [x] Ilustrar cada **requisito funcional** com [DCU (Diagrama de Casos de Uso)](https://github.com/wellifabio/senai2024/tree/main/ds/3des/03-rms/aula02)
-- [x] Modelar o banco de dados MER x DER Modelo conceitual
-- [x] Cadastrar os integrantes do grupo nas ferramentas de gestão de projeto escolhida Trello, Jira, Asana, etc.
-
-### 3º Sprint 
-- [x] Iniciar a codificação/desenvolvimento **Banco de dados**
-- [x] Iniciar a codificação/desenvolvimento **Back-end**
-- [x] UML [DC (Diagrama de Classes)](https://github.com/wellifabio/senai2024/tree/main/ds/3des/03-rms/aula03) **Back-End**
-- [x] Iniciar a codificação/desenvolvimento **Front-end**
-- [x] UML [DA (Diagrama de Atividades)](../../02-pbe2/aula10/README.md) **Front-End**
-- [x] Iniciar a codificação/desenvolvimento **Mobile**
-- [x] Análise de Viabilidade com Matriz SWOT
-- [x] Triângulo da qualidade do Projeto (Escopo, Prazo e Custo)
-
-### 4º Sprint 
-Funcionalidades principais implementadas, como:
-- [x] Back-End - CRUDs (Cadastro, Listagem, alteração e exclusão) das principais **tabelas**.
-- [x] Back-Front - CRUDs das principais **Telas** com Responsividade.
-- [x] Login com autenticação real (segurança JWT).
-- [-] Integração do front com o back-end e banco de dados. 
-- [x] Fluxo de navegação funcionando (Web e/ou Mobile).
-- [x] Relatório de testes manuais **unitários**, **integração** e **ponto a ponto**.
-- [x] Entregas através do repositório do projeto no GitHub, com evidências dos testes em relatório no formato PDF.
-
-## 5º Sprint 06/10 Backlog
-Nesta sprint, vamos focar na implantação do projeto, garantindo que tudo esteja funcionando corretamente em um ambiente de produção. Também faremos uma revisão final do código e documentação.
-- [x] **Implantação** do Back-End em um serviço de nuvem (ex: Vercel, Heroku, AWS).
-- [x] **Implantação** do Front-End em um serviço de nuvem (ex: Vercel, GitHub Pages).
-- [x] Iniciar o desenvolvimento do App **Mobile** (Funcionalidades principais).
-- [ ] Testes de integração e ponto a ponto (Caixa preta e Caixa branca).
-    - [x] Após o **back-end** implantado, Criar um Roteiro/check-list e testar manualmente (**Teste de integração: Back/BD**) a API a partir do **Insomnia** e documentar os testes. Tirando prints e fazendo um relatório. (**Caixa branca**).
-    - [ ] Após o **front-end** implantado, Criar um Roteiro/check-list para testar o **Front-End** manualmente (**Teste ponto a ponto**), fazer um relatório dos testes. (**Caixa branca**).
-    - [ ] Criar um Roteiro/check-list (**teste de integração**) pedir para um colega de outro grupo testar a **API implantada** a partir do **Insomnia** e documentar os testes. Tirando prints e fazendo um relatório. (**Caixa preta**).
-    - [ ] Criar um Roteiro/check-list (Teste **ponto a ponto**) pedir para um colega de outro grupo testar manualmente o **Front-End implantado** e fazer um relatório dos testes. (**Caixa preta**).
-- [ ] Adicionar um recurso de **IoT** (opcional, pois dependendo do tema pode não fazer sentido).
-- [x] Revisão do cronograma do projeto.
-- [x] Revisão da documentação.
-    - [x] Matriz SWOT.
-    - [x] DER atualizado ou UML Diagrama de Classes.
-    - [x] Requisitos Funcionais e Não Funcionais.
-        - [x] UML DCU (Diagrama de Caso de Uso).
-- [x] Para implantação cada stack (front-end, back-end e mobile) foi necessário criar um repositório separado para cada um no **GitHub**, deixar link dos repositórios no **README.md do repositório principal** do projeto, com todas as documentações em **PDF**.
-
-# **Mobile(figma)**
--  [Protótipo Funcional](figma.com/proto/JjGNnIbInPhBAW3oVJMBKU/padaria?node-id=49-5168&p=f&t=UG3fEWPQwA3zUfn1-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1)
-
-# **Relatório de Testes**
--  [Relatório](./Relatório%20de%20teste%201%20teste.pdf)
-  
+```bash
+npx prisma migrate dev --name init
+```
 
 ## Requisitos Funcionais
 
@@ -111,28 +94,31 @@ Nesta sprint, vamos focar na implantação do projeto, garantindo que tudo estej
 - [RF014] O sistema deve permitir que o Gerente faça login para acessar as funções administrativas.
 - [RF015] O sistema deve garantir que o Gerente só consiga fazer login se estiver cadastrado previamente.
 
+### Diagrama de Atividades
+
 ![](./docs/Diagrama%20Cantina.png)
 
-## Padaria (Trello)
+## Trello
 ![](./docs/Trello.png)
 
-## Padaria (Diagrama de Classes)
+## Diagrama de Classes
 ![](./docs/Diagrama_de_Classes.png)
 
-## Padaria (DER)
+## DER (Diagrama, Entidade e Relacionamento)
 ![](./docs/DER%20padaria.png)
 
-## Padaria (Canvas)
+## Diagrama de Atividades
+![](./docs/Captura%20de%20tela%202025-06-18%20084534.png)
+
+## Canvas
 ![](./docs/Canvas.png)
 
-## Padaria (Gantt)
+## Gráfico Gantt
 ![](./docs/gant.jpeg)
 
-## Padaria (SWOT)
+## Matriz SWOT
 ![](./docs/swot.jpeg)
 
-## Padaria (Triângulo de Ferro)
+## Triângulo de Ferro
 ![](./docs/Triangulo.png)
 
-## Padaria (Diagrama de Atividades)
-![](./docs/Captura%20de%20tela%202025-06-18%20084534.png)
