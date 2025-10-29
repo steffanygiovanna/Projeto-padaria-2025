@@ -122,3 +122,5 @@ npx prisma migrate dev --name init
 ## Triângulo de Ferro
 ![](./docs/Triangulo.png)
 
+//Sera?
+
